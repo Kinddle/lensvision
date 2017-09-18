@@ -1,0 +1,235 @@
+@import "helpers/from_to";
+@import "helpers/form-reset";
+@import "../../../node_modules/compass-sass-mixins/lib/compass/css3";
+@import "../../../node_modules/compass-sass-mixins/lib/compass/typography/lists/inline-block-list";
+@import "../../../node_modules/compass-sass-mixins/lib/compass/support";
+
+@import "variables";
+@import "variables-bootstrap-theme";
+@import "bootstrap";
+
+// Note: we could use Autoprefixer to add vendor prefixes to our CSS -> https://github.com/postcss/autoprefixer
+
+// #TODO Compass library has enough mixins
+// so we could freely get rid of these custom ones
+@import 'mixins/mixins'; // custom mixins
+
+@import 'layout/layout'; // responsive grid and media queries
+@import 'layout/grid'; // custom grid used for adantages pink boxes
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('../../fonts/bootstrap/glyphicons-halflings-regular.eot');
+  src: url('../../fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../../fonts/bootstrap/glyphicons-halflings-regular.woff') format('woff'), url('../../fonts/bootstrap/glyphicons-halflings-regular.ttf') format('truetype'), url('../../fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../../fonts/icomoon/icomoon-23012017.eot?l20ieu');
+  src:  url('../../fonts/icomoon/icomoon-23012017.eot?l20ieu#iefix') format('embedded-opentype'), url('../../fonts/icomoon/icomoon-23012017.ttf?l20ieu') format('truetype'), url('../../fonts/icomoon/icomoon-23012017.woff?l20ieu') format('woff'), url('../../fonts/icomoon/icomoon-23012017.svg?l20ieu#icomoon') format('svg');
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Arvo:400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Questrial');
+
+@import "modules/customer-service-policy";
+@import "modules/top-nav";
+@import "modules/search";
+@import "modules/main-menu";
+@import "modules/mobile-menu";
+@import "modules/snap";
+@import "modules/snap-main";
+@import "modules/slick-theme";
+@import "modules/slick";
+@import "modules/slider";
+@import "modules/features";
+@import "modules/reset-oldCss";
+
+// Components (here we move refactored components)
+@import "components/component.CmsContent";
+@import "components/component.MainMenu";
+@import "components/component.CollapseState";
+@import "components/component.Products";
+@import "components/component.Buttons";
+@import "components/component.AdvertizingBlock";
+@import "components/component.Services";
+@import "components/component.LiveChat";
+@import "components/component.Advantages";
+@import "components/component.Ratings";
+@import "components/component.MenuCategoryList";
+@import "components/component.LoginState";
+@import "components/component.Banner";
+@import "components/component.Location";
+@import "components/component.About";
+@import "components/component.Brands";
+@import "components/component.Thumbnail";
+@import "components/component.Title";
+@import "components/component.Breadcrumb";
+@import "components/component.ChooseCategoryList";
+@import "components/component.Ebook";
+@import "components/component.ReadMore";
+@import "components/component.SocialButtons";
+@import "components/component.SocialShareKit";
+@import "components/component.TabbedContentBox";
+@import "components/component.OurFeatures";
+@import "components/component.VerticalTimeline";
+@import "components/component.Team";
+@import "components/component.Registration";
+@import "components/component.FloatL";
+@import "components/component.Footer";
+@import "components/component.Pagination";
+@import "components/component.ItemsPerPage";
+@import "components/component.BootstrapDateTimePicker";
+
+
+body {
+  font-size: 16px;
+  font-family: $Montserrat;
+}
+a {
+  color: $lvpink;
+  &:hover,
+  &:focus {
+    color: $lvdarkpink;
+  }
+}
+.pink-text {
+  color: $lvpink;
+}
+.reset-pl {
+  padding-left: 0 !important;
+}
+.reset-pr {
+  padding-right: 0 !important;
+}
+.reset-ml {
+  margin-left: 0 !important;
+}
+.reset-mr {
+  margin-right: 0 !important;
+}
+.reset-mt {
+  margin-top: 0 !important;
+}
+.reset-m {
+  margin: 0;
+}
+.reset-p {
+  padding: 0 !important;
+}
+.reset-mb {
+  margin-bottom: 0;
+}
+.margin-t-10 {
+  margin-top: 10px;
+}
+.margin-t-20 {
+  margin-top: 20px;
+}
+.margin-t-40 {
+  margin-top: 40px;
+}
+.margin-b-20 {
+  margin-bottom: 20px;
+}
+.margin-tb-20 {
+  margin: 20px 0;
+}
+.padding-tb-20 {
+  padding: 20px 0;
+}
+.padding-20 {
+  padding: 20px;
+}
+.full-width {
+  width: 100%;
+}
+
+.col-xs-8--landscape {
+  @include from-to(481px, 767px) {
+    width: 66.6666666667%;
+    display: inline-block;
+    float: left;
+  }
+}
+.col-xs-6--landscape {
+  @include from-to(481px, 767px) {
+    width: 50%;
+    display: inline-block;
+    float: left;
+  }
+}
+.col-xs-4--landscape {
+  @include from-to(481px, 767px) {
+    width: 33.3333333333%;
+    display: inline-block;
+    float: left;
+  }
+}
+.hidden-xs--landscape {
+  @include from-to(481px, 767px) {
+    display: none;
+  }
+}
+.hidden-xs--portrait {
+  @include to(510px) {
+    display: none;
+  }
+}
+.reset-border {
+  border: none;
+}
+
+.flex {
+  @include from(1000px) {
+    display: table;        /* IE < 10, Opera *Presto* Desktop (Now dead) */
+    display: -webkit-box;  /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UCBrowser Android */
+    display: -moz-box;     /* Firefox 2 - 27 (2009 Spec), UCMini Android */
+    display: -ms-flexbox;  /* IE10 (2012 Syntax) */
+    display: -webkit-flex; /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
+    display: flex;         /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
+  }
+}
+.hidden-from-1000 {
+  @include from(1000px) {
+    display: none;
+  }
+}
+
+//Media
+.media-left {
+  display: table-cell;
+  vertical-align: top;
+  padding-right: 10px;
+}
+.media-body {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.dropdown {
+  @include to(767px) {
+    position: inherit;
+  }
+}
+
+/************ scss for all IE browsers ****************/
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+     /* IE10+ CSS styles go here */
+  .Services__Thumbnail, .Products__Thumbnail {
+    border: 1px solid $white;
+    &:hover {
+      border: 1px solid $lvlightgray;
+    }
+  }
+  .TabbedContentBox {
+    border: 1px solid $lvlightgray;
+  }
+}
+
+.icon-lensvision-lens {
+  font-family: 'icomoon' !important;
+  &:before {
+    content: "\e905";
+  }
+}

@@ -1,0 +1,19 @@
+%Thumbnail {
+  display: block;
+  padding: 4px;
+  margin-bottom: 20px;
+  line-height: 1.428571429;
+  color: $lvgray;
+  text-decoration: none !important;  //reset src/stylesheets/bootstrap/scaffolding.scss
+  @include transition (all 0.2s ease-in-out);
+  &:hover,
+  &:focus,
+  &:active {
+    color: $lvgreen;
+    @include box-shadow(0 0 3px rgba(0,0,0,0.5));
+  }
+  &:hover .Products__Price {
+    background-color: $lvgreen;
+    color: $white;
+  }
+}

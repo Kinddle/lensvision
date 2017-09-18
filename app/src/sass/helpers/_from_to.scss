@@ -1,0 +1,86 @@
+/* ---------------------------------------------------------------------------
+  Content-first media queries
+  ===========================
+  These mq abstractions don't overlap:
+  from( n ) { ... }
+    Styles elements from (and inclusive) of n.
+    Useful for adding complexity as viewport size increases.
+  to( n ) { ... }
+    Styles elements up to but not including n.
+    Effectively, max-width n-1
+    Useful for the occasional small screen only style.
+  n must be unitless CSS pixels; e.g., 768 or 1024
+  It gets converted to em.
+--------------------------------------------------------------------------- */
+
+/*
+@TODO
+- [ ] base font size value (16) may need to match that used on the html element in some browsers. Doesn't seem to matter much in Chrome.
+- [ ] Look into how IE8 code is currently being delivered and set up an
+      $old-ie variable as necessary.
+*/
+
+$old-ie: false !default;
+
+// Inclusive of the value and above.
+@mixin from( $value, $legacy: null ) {
+  @if ( unitless($value) ){
+    $value: $value / 16 * 1em; // Convert to em as a default:
+  }
+  @if $old-ie {
+    @if $legacy {
+      @content;
+    }
+  } @else {
+    @media screen and (min-width: $value) {
+      @content;
+    }
+  }
+}
+
+
+// Up to but not inclusive (1px less) the value:
+@mixin to( $value, $legacy: null ) {
+  @if ( unitless($value) ){
+    $value: $value - 1;
+    $value: $value / 16 * 1em; // Convert to em as a default:
+  }
+  @if $old-ie {
+    @if $legacy {
+      @content;
+    }
+  } @else {
+    @media screen and ( max-width: $value ) {
+      @content;
+    }
+  }
+}
+
+
+@mixin from-to( $min, $max, $legacy: null ) {
+  @if ( unitless($min) ){
+    $min: $min / 16 * 1em; // Convert to em as a default:
+  }
+  @if ( unitless($max) ){
+    $max: $max - 1;
+    $max: $max / 16 * 1em;
+  }
+
+  @if $old-ie {
+    @if $legacy {
+      @content;
+    }
+  } @else {
+    @media screen and (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  }
+}
+
+
+// IE only
+@mixin legacy {
+  @if $old-ie {
+    @content;
+  }
+}

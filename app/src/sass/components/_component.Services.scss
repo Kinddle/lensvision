@@ -1,0 +1,51 @@
+%Description {
+  font-weight: 300;
+  font-size: 16px;
+  @include to(1024px) {
+    font-size: 14px;
+  }
+}
+.Services {
+  @extend .margin-tb-20;
+  &__Thumbnail {
+    @extend %Thumbnail;
+    &--BgLight {
+      background-color: $lvbackground;
+    }
+  }
+  &__Image {
+    width: 100%;
+  }
+  &__Description {
+    @extend %Description;
+  }
+  &__Caption {
+    color: $lvgraymedium;
+    @include from(992px) {
+      position: relative;
+      min-height: 220px;
+    }
+    @include from-to(768px, 991px) {
+      position: relative;
+      min-height: 240px;
+    }
+    & .title {
+      font-size: 20px;
+      font-weight: 400;
+      padding: 9px 0;
+      font-family: $Montserrat;
+      @include to(1024px) {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__Button {
+    @extend %ActionButtons;
+    @include from(768px) {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+}

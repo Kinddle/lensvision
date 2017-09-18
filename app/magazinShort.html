@@ -1,0 +1,1743 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="format-detection" content="telephone=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+        <title>Magazin Front</title>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="src/css/oldCss.css">
+        <link rel="stylesheet" type="text/css" href="src/css/styles.css">
+    </head>
+    <body>
+        <!-- Top nav mobile  snap-drawers-->
+        <div class="snap-drawers top-nav-mobile">
+            <div class="snap-drawer snap-drawer-left">
+                <div>
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <div class="panel-title">
+                                <a class="top-nav-mobile__links_white" role="button" data-toggle="collapse" data-parent="#accordion" href="#login" aria-expanded="true" aria-controls="login">
+                                    <i class="fa fa-user fa-fw" aria-hidden="true"></i>
+                                    <span>Anmelden<span>
+                                    <div class="Switch">
+                                        <span class="Switch__MarkerBefore"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                                        <span class="Switch__MarkerAfter"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div id="login" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFour">
+                            <div class="panel-body panel-body--white">
+                                <ul class="DropdownForm">
+                                    <form class="DropdownFormWrap js--registration-selector" method="get" action="" data-toggle="validator" role="form">
+                                        <h4 class="DropdownFormWrap__Title">Login</h4>
+                                        <div class="Form__FormGroup">
+                                            <div class="FormElement form-group Floatl has-feedback js--floatl required">
+                                                <label class="Floatl__Label">Emailadresse</label>
+                                                <input name="email" id="email" class="Floatl__Input Form__FormInput" type="email" placeholder="example@gmail.com" data-error="Bruh, that email address is invalid" required>
+                                                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                            <div class="FormElement form-group Floatl has-feedback js--floatl required">
+                                                <label class="Floatl__Label">Passwort wiederholen</label>
+                                                <input name="password" id="password" class="Floatl__Input Form__FormInput" type="password" placeholder="Passwort wiederholen" data-minlength="6" required>
+                                                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                        </div>
+                                        <a class="DropdownFormWrap__Link" href="#" title="Forgot password?">Forgot password?</a>
+                                        <div class="checkbox">
+                                            <label>
+                                            <input type="checkbox"> Remember me
+                                            </label>
+                                        </div>
+                                        <button type="submit" class="btn DropdownFormWrap__Button">Log in</button>
+                                        <p class="text-center margin-t-10">or</p>
+                                        <button class="DropdownFormWrap__Button--register btn text-center reset-mt" type="submit"> <strong> <i class="fa fa-angle-double-right" aria-hidden="true"></i> Register</strong></button>
+                                    </form>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <div class="panel-title">
+                                <a class="top-nav-mobile__links_white" role="button" data-toggle="collapse" data-parent="#accordion" href="#contactLenses" aria-expanded="true" aria-controls="contactLenses">
+                                    <span>Kontaktlinsen</span>
+                                    <div class="Switch">
+                                        <span class="Switch__MarkerBefore"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                                        <span class="Switch__MarkerAfter"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div id="contactLenses" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>
+                                        <a class="top-nav-mobile__links_white" href="#">
+                                        <span>link 1</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="top-nav-mobile__links_white" href="#">
+                                        <span>link 2</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="top-nav-mobile__links_white" href="#">
+                                        <span>link 3</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <div class="panel-title">
+                                <a class="top-nav-mobile__links_white" role="button" data-toggle="collapse" data-parent="#accordion" href="#careProducts" aria-expanded="true" aria-controls="careProducts">
+                                    <span>Pflegemittel</span>
+                                    <div class="Switch">
+                                        <span class="Switch__MarkerBefore"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                                        <span class="Switch__MarkerAfter"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div id="careProducts" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>
+                                        <a class="top-nav-mobile__links_white" href="#">
+                                        <span>link 1</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="top-nav-mobile__links_white" href="#">
+                                        <span>link 2</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="top-nav-mobile__links_white" href="#">
+                                        <span>link 3</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="panel-heading" role="tab" id="headingTree">
+                            <div class="panel-title">
+                                <a class="top-nav-mobile__links_white" role="button" data-toggle="collapse" data-parent="#accordion" href="#sunglasses" aria-expanded="true" aria-controls="sunglasses">
+                                    <span>Sonnenbrillen</span>
+                                    <div class="Switch">
+                                        <span class="Switch__MarkerBefore"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                                        <span class="Switch__MarkerAfter"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div id="sunglasses" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTree">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>
+                                        <a class="top-nav-mobile__links_white" href="#">
+                                        <span>link 1</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="top-nav-mobile__links_white" href="#">
+                                        <span>link 2</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="top-nav-mobile__links_white" href="#">
+                                        <span>link 3</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="panel-heading" role="tab" id="headingFive">
+                            <div class="panel-title">
+                                <a class="top-nav-mobile__links_white" href="magazinFront.html">
+                                    <span>Rategeber</span>
+                                    <div class="Switch">
+                                        <span class="Switch__MarkerLink"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <ul class="customer-service-policy-mobile">
+                            <li class="customer-service-policy-mobile__item">
+                                <i class="fa fa-smile-o fa-lg fa-fw customer-service-policy-mobile__icon"></i>
+                                <span>Gratis Versand & Rücksendungen</span>
+                            </li>
+                            <li class="customer-service-policy-mobile__item">
+                                <i class="fa fa-clock-o fa-lg fa-fw customer-service-policy-mobile__icon" aria-hidden="true"></i>
+                                <span>Lieferung am gleichen Tag</span>
+                            </li>
+                            <li class="customer-service-policy-mobile__item">
+                                <i class="fa fa-money fa-lg fa-fw customer-service-policy-mobile__icon" aria-hidden="true"></i>
+                                <span>Geld-Zurück-Garantie</span>
+                            </li>
+                            <li class="customer-service-policy-mobile__item">
+                                <span>Kostenloses Fachgespräch</span>
+                            </li>
+                            <li class="customer-service-policy-mobile__item pink-text">
+                                <i class="fa fa-phone fa-lg fa-fw customer-service-policy-mobile__icon" aria-hidden="true"></i>
+                                0800 20 20 15
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Languages -->
+                    <div>
+                        <ul class="list-inline languages text-center">
+                            <li class="active"><a class="languages__item" href="#">Deutsch</a></li>
+                            <li><a class="languages__item" href="#">English</a></li>
+                            <li><a class="languages__item" href="#">French</a></li>
+                            <li><a class="languages__item" href="#">Italiano</a></li>
+                        </ul>
+                    </div>
+                    <!-- end Languages -->
+                </div>
+            </div>
+            <!-- snap-drawer snap-drawer-left-->
+            <!-- sticky social bar -->
+            <div class="ssk-sticky ssk-left ssk-center ssk-lg ssk-group">
+                <a href="" class="ssk ssk-facebook"></a>
+                <a href="" class="ssk ssk-twitter"></a>
+                <a href="" class="ssk ssk-whatsapp"></a>
+                <a href="" class="ssk ssk-email"></a>
+                <a href="" class="ssk ssk-share"><i class="fa fa-share-alt ssk--share-icon" aria-hidden="true"></i></a>
+            </div>
+            <!-- end of sticky social bar -->
+            <!-- navbar fixed bottom for mobiles -->
+            <div class="main-menu__buttons navbar-fix-bottom visible-xs-block MainMenu__ActionsList MainMenu__ActionsList--mobile">
+                <div class="btn-group-justified" role="group" aria-label="...">
+                    <a class="main-menu__buttons__item MainMenu__ActionsItem" href="#" role="button">
+                        <i class="fa fa-calendar-o fa-fw" aria-hidden="true"></i>
+                        <br>
+                        <p class="reset-mb">Termin vereinbaren</p>
+                    </a>
+                    <a class="main-menu__buttons__item MainMenu__ActionsItem" href="#" role="button">
+                        <i class="fa fa-location-arrow fa-fw" aria-hidden="true"></i>
+                        <br>
+                        <p class="reset-mb">Optiker finden</p>
+                    </a>
+                    <a class="main-menu__buttons__item active MainMenu__ActionsItem orderHistory-btn MainMenu__ActionsItem--order_history" href="#" role="button">
+                        <i class="fa fa-repeat fa-fw" aria-hidden="true"></i>
+                        <br>
+                        <p class="reset-mb">Nach-bestellen</p>
+                    </a>
+                </div>
+            </div>
+            <!-- end navbar fixed bottom for mobiles -->
+            <!-- handler for mobile menu -->
+            <!-- Snap content -->
+            <div id="content" class="snap-content">
+                <!-- Navbar for mobile -->
+                <div id="toolbar" class="hidden-lg hidden-md hidden-sm navbar-fix-top">
+                    <nav class="top-nav" role="navigation">
+                        <a href="#0" id="open-left" class="toolbar__open-left pull-left">Open Nav<span aria-hidden="true"></span></a>
+                        <a class="top-nav__brand" href="#"><img alt="Brand" class="img-responsive " src="img/logo.png"></a>
+                        <ul class="list-inline pull-right toolbar__list">
+                            <li class="toolbar__item hidden-xs hidden-sm">
+                                <a href="#" class="dropdown-toggle top-nav__dropdown-list toolbar__links" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
+                                    <span class="hidden-xs">Anmelden<span>
+                                    <!-- <span>Martina<span> -->
+                                    <i class="fa fa-angle-down fa-fw" aria-hidden="true"></i>
+                                </a>
+                                <ul class="dropdown-menu DropdownForm">
+                                    <form class="DropdownFormWrap js--registration-selector" method="get" action="" data-toggle="validator" role="form">
+                                        <h4 class="DropdownFormWrap__Title">Login</h4>
+                                        <div class="Form__FormGroup">
+                                            <div class="FormElement form-group Floatl has-feedback js--floatl required">
+                                                <label class="Floatl__Label">Emailadresse</label>
+                                                <input name="email" id="email" class="Floatl__Input Form__FormInput" type="email" placeholder="example@gmail.com" data-error="Bruh, that email address is invalid" required>
+                                                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                            <div class="FormElement form-group Floatl has-feedback js--floatl required">
+                                                <label class="Floatl__Label">Passwort wiederholen</label>
+                                                <input name="password" id="password" class="Floatl__Input Form__FormInput" type="password" placeholder="Passwort wiederholen" data-minlength="6" required>
+                                                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                        </div>
+                                        <a class="DropdownFormWrap__Link" href="#" title="Forgot password?">Forgot password?</a>
+                                        <div class="checkbox">
+                                            <label>
+                                            <input type="checkbox"> Remember me
+                                            </label>
+                                        </div>
+                                        <button type="submit" class="btn DropdownFormWrap__Button">Log in</button>
+                                        <p class="text-center margin-t-10">or</p>
+                                        <button class="DropdownFormWrap__Button--register btn text-center reset-mt" type="submit"> <strong> <i class="fa fa-angle-double-right" aria-hidden="true"></i> Register</strong></button>
+                                    </form>
+                                </ul>
+                            </li>
+                            <li class="dropdown toolbar__item">
+                                <a href="#" class="dropdown-toggle toolbar__links cart" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-shopping-cart fa-lg fa-fw" aria-hidden="true"></i>
+                                <span class="badge">1</span>
+                                <i class="fa fa-angle-down fa-fw" aria-hidden="true"></i>
+                                </a>
+                                <div class="dropdown-menu BasketFlyout">
+                                    <div class="basketFlyoutWrap">
+                                        <a href="#" class="media BasketFlyout__Media">
+                                            <div class="media-left">
+                                                <img class="BasketFlyout__MediaObject" src="img/cart-img-1.png" alt="Basket image">
+                                            </div>
+                                            <div class="media-body BasketFlyout__Body">
+                                                <span class="BasketFlyout__ItemText">VISO Primera Toric - 2 Contact Lenses</span>
+                                                <p class="BasketFlyout__Price">43.80 chf</p>
+                                            </div>
+                                        </a>
+                                        <div class="divider"></div>
+                                    </div>
+                                    <div class="basketFlyoutWrap">
+                                        <a href="#" class="media BasketFlyout__Media">
+                                            <div class="media-left">
+                                                <img class="BasketFlyout__MediaObject" src="img/cart-img-1.png" alt="Basket image">
+                                            </div>
+                                            <div class="media-body BasketFlyout__Body">
+                                                <span class="BasketFlyout__ItemText">VISO Primera Toric - 2</span>
+                                                <p class="BasketFlyout__Price">143.80 chf</p>
+                                            </div>
+                                        </a>
+                                        <div class="divider"></div>
+                                    </div>
+                                    <div class="BasketFlyout__TotalAmount">
+                                        <p class="text-right">Total</p>
+                                        <p class="text-right text-uppercase pink-text">343.80 chf</p>
+                                        <div class="divider"></div>
+                                    </div>
+                                    <div class="basketFlyoutWrap">
+                                        <a class="btn BasketFlyout__Button pull-right" href="#" role="button">Display cart</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="toolbar__item">
+                                <form role="form">
+                                    <div class="toolbar__btn-wrap">
+                                        <button type="button" class="dropdown-toggle toolbar__btn js--search-trigger" data-toggle="dropdown">
+                                        <i class="fa fa-search fa-lg fa-fw" aria-hidden="true"></i>
+                                        </button>
+                                        <div class="dropdown-menu toolbar__search" role="menu">
+                                <form class="navbar-form snap-drawer__search" role="search">
+                                <div class="form-group snap-drawer__search-box">
+                                <input type="text" class="form-control top-nav-form__input js--search-input" placeholder="Sie suchen...." autofocus>
+                                <i class="fa fa-search fa-fw snap-drawer__search-box-icon" aria-hidden="true"></i>
+                                </div>
+                                </form>
+                                </div>
+                                </div>
+                                </form>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- end toolbar -->
+                <!-- end Navbar for mobile -->
+                <header>
+                    <div class="customer-service-policy hidden-xs">
+                        <div class="container">
+                            <ul class="customer-service-policy__row">
+                                <li class="customer-service-policy__list js--tooltipTrigger reset-pl" data-target="#sheeping_returns">
+                                    <i class="fa fa-smile-o fa-lg fa-fw"></i>
+                                    <span>Gratis Versand & Rücksendungen</span>
+                                </li>
+                                <li class="customer-service-policy__list js--tooltipTrigger" data-target="#delivery">
+                                    <i class="fa fa-clock-o fa-lg fa-fw" aria-hidden="true"></i>
+                                    <span>Lieferung am gleichen Tag</span>
+                                </li>
+                                <li class="customer-service-policy__list js--tooltipTrigger" data-target="#warranty">
+                                    <i class="fa fa-money fa-lg fa-fw" aria-hidden="true"></i>
+                                    <span>Geld-Zurück-Garantie</span>
+                                </li>
+                                <li class="customer-service-policy__list js--tooltipTrigger" data-target="#free_expert_talk">
+                                    Kostenloses Fachgespräch
+                                </li>
+                                <li class="customer-service-policy__list pink-text reset-pr">
+                                    <i class="fa fa-phone fa-lg fa-fw customer-service-policy-mobile__icon" aria-hidden="true"></i>
+                                    0800 20 20 15
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Tips content -->
+                    <div id="sheeping_returns" class="hidden">
+                        <h6>Mit Ihrer Partner-Card erhalten Sie 3%* Sofort-Rabatt auf jeden Online-Einkauf oder beim Einkauf in ihrem hagebamarkt </h6>
+                        <p>
+                            dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book
+                        </p>
+                    </div>
+                    <div id="delivery" class="tip-content hidden">
+                        <h6>Mit Ihrer Partner-Card erhalten Sie 3%* Sofort-Rabatt auf jeden Online-Einkauf oder beim Einkauf in ihrem hagebamarkt </h6>
+                        <p>
+                            dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book
+                        </p>
+                    </div>
+                    <div id="warranty" class="tip-content hidden">
+                        <h6>Mit Ihrer Partner-Card erhalten Sie 3%* Sofort-Rabatt auf jeden Online-Einkauf oder beim Einkauf in ihrem hagebamarkt </h6>
+                        <p>
+                            dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book
+                        </p>
+                    </div>
+                    <div id="free_expert_talk" class="tip-content hidden">
+                        <h6>Mit Ihrer Partner-Card erhalten Sie 3%* Sofort-Rabatt auf jeden Online-Einkauf oder beim Einkauf in ihrem hagebamarkt </h6>
+                        <p>
+                            dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book
+                        </p>
+                    </div>
+                    <!--end Tips content -->
+                    <!-- Top nav desktop and tablet -->
+                    <nav class="navbar top-nav hidden-xs">
+                        <div class="container top-nav__container">
+                            <div class="navbar-header">
+                                <a class="navbar-brand top-nav__brand" href="#"><img alt="Brand" class="img-responsive" src="img/logo.png"></a>
+                            </div>
+                            <ul class="navbar-nav top-nav_right right navbar-right">
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle top-nav__dropdown-list top-nav__links" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fa fa-user fa-fw" aria-hidden="true"></i>
+                                        <span>Anmelden<span>
+                                        <!-- <span>Martina<span> -->
+                                        <i class="fa fa-angle-down fa-fw" aria-hidden="true"></i>
+                                    </a>
+                                    <ul class="dropdown-menu DropdownForm">
+                                        <form class="DropdownFormWrap js--registration-selector" method="get" action="" data-toggle="validator" role="form">
+                                            <h4 class="DropdownFormWrap__Title">Login</h4>
+                                            <div class="Form__FormGroup">
+                                                <div class="FormElement form-group Floatl has-feedback js--floatl required">
+                                                    <label class="Floatl__Label">Emailadresse</label>
+                                                    <input name="email" id="email" class="Floatl__Input Form__FormInput" type="email" placeholder="example@gmail.com" data-error="Bruh, that email address is invalid" required>
+                                                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                                    <div class="help-block with-errors"></div>
+                                                </div>
+                                                <div class="FormElement form-group Floatl has-feedback js--floatl required">
+                                                    <label class="Floatl__Label">Passwort wiederholen</label>
+                                                    <input name="password" id="password" class="Floatl__Input Form__FormInput" type="password" placeholder="Passwort wiederholen" data-minlength="6" required>
+                                                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                                    <div class="help-block with-errors"></div>
+                                                </div>
+                                            </div>
+                                            <a class="DropdownFormWrap__Link" href="#" title="Forgot password?">Forgot password?</a>
+                                            <div class="checkbox">
+                                                <label>
+                                                <input type="checkbox"> Remember me
+                                                </label>
+                                            </div>
+                                            <button type="submit" class="btn DropdownFormWrap__Button">Log in</button>
+                                            <p class="text-center margin-t-10">or</p>
+                                            <button class="DropdownFormWrap__Button--register btn text-center reset-mt" type="submit"> <strong> <i class="fa fa-angle-double-right" aria-hidden="true"></i> Register</strong></button>
+                                        </form>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle top-nav__dropdown-list top-nav__links" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa fa-shopping-cart fa-fw" aria-hidden="true"></i>
+                                    <span class="badge">1</span>
+                                    <i class="fa fa-angle-down fa-fw" aria-hidden="true"></i>
+                                    </a>
+                                    <div class="dropdown-menu BasketFlyout">
+                                        <div class="basketFlyoutWrap">
+                                            <a href="#" class="media BasketFlyout__Media">
+                                                <div class="media-left">
+                                                    <img class="BasketFlyout__MediaObject" src="img/cart-img-1.png" alt="Basket image">
+                                                </div>
+                                                <div class="media-body BasketFlyout__Body">
+                                                    <span class="BasketFlyout__ItemText">VISO Primera Toric - 2 Contact Lenses</span>
+                                                    <p class="BasketFlyout__Price">43.80 chf</p>
+                                                </div>
+                                            </a>
+                                            <div class="divider"></div>
+                                        </div>
+                                        <div class="basketFlyoutWrap">
+                                            <a href="#" class="media BasketFlyout__Media">
+                                                <div class="media-left">
+                                                    <img class="BasketFlyout__MediaObject" src="img/cart-img-1.png" alt="Basket image">
+                                                </div>
+                                                <div class="media-body BasketFlyout__Body">
+                                                    <span class="BasketFlyout__ItemText">VISO Primera Toric - 2</span>
+                                                    <p class="BasketFlyout__Price">143.80 chf</p>
+                                                </div>
+                                            </a>
+                                            <div class="divider"></div>
+                                        </div>
+                                        <div class="BasketFlyout__TotalAmount">
+                                            <p class="text-right">Total</p>
+                                            <p class="text-right text-uppercase pink-text">343.80 chf</p>
+                                            <div class="divider"></div>
+                                        </div>
+                                        <div class="basketFlyoutWrap">
+                                            <a class="btn BasketFlyout__Button pull-right" href="#" role="button">Display cart</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle top-nav__dropdown-list" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Deutsch <i class="fa fa-angle-down fa-fw" aria-hidden="true"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="top-nav__dropdown-menu-item" href="#">English</a></li>
+                                        <li><a class="top-nav__dropdown-menu-item" href="#">French</a></li>
+                                        <li><a class="top-nav__dropdown-menu-item" href="#">Italiano</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <form class="">
+                                <div class="input-group TopnavForm__Search">
+                                    <input type="text" class="form-control TopnavForm__Search__Input" placeholder="Sie suchen....">
+                                    <span class="input-group-btn">
+                                    <button class="btn btn-default TopnavForm__Search__Button" type="button">
+                                    <i class="fa fa-search fa-lg fa-fw top-nav-form__search-icon" aria-hidden="true"></i>
+                                    </button>
+                                    </span>
+                                </div>
+                            </form>
+                        </div>
+                    </nav>
+                    <!-- end Top nav -->
+                </header>
+                <section>
+                    <div class="cd-morph-dropdown hidden-xs MainMenu js--main-menu-selector">
+                        <div class="container">
+                            <a href="#" class="nav-trigger MainMenu__TabletMenuTrigger js--nav-trigger">Open Nav<span aria-hidden="true"></span></a>
+                            <nav class="main-menu MainMenu__Inner js--main-menu">
+                                <ul class="nav navbar-nav">
+                                    <li class="MainMenu__Item">
+                                        <a class="main-menu__links MainMenu__ItemLink" href="index.html">
+                                        <i class="fa fa-home fa-lg" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li class="js--has-dropdown gallery MainMenu__Item" data-content="contacts">
+                                        <a class="main-menu__links MainMenu__ItemLink" href="#">Kontaktlinsen</a>
+                                    </li>
+                                    <li class="js--has-dropdown links MainMenu__Item" data-content="careProducts">
+                                        <a class="main-menu__links MainMenu__ItemLink" href="#">Pflegemittel</a>
+                                    </li>
+                                    <li class="js--has-dropdown button MainMenu__Item" data-content="sunglasses">
+                                        <a class="main-menu__links MainMenu__ItemLink" href="#">Sonnenbrillen</a>
+                                    </li>
+                                    <li class="MainMenu__Item">
+                                        <a class="main-menu__links MainMenu__ItemLink" href="magazinFront.html">Rategeber</a>
+                                    </li>
+                                </ul>
+                                <div class="main-menu__buttons pull-right visible-lg-block visible-md-block visible-sm-block MainMenu__ActionsList">
+                                    <button class="main-menu__buttons__item MainMenu__ActionsItem" role="button">
+                                        <i class="fa fa-calendar-o fa-fw" aria-hidden="true"></i>
+                                        <p class="reset-m">
+                                            Termin ereinbaren
+                                        </p>
+                                    </button>
+                                    <button class="main-menu__buttons__item MainMenu__ActionsItem" role="button">
+                                        <i class="fa fa-location-arrow fa-fw" aria-hidden="true"></i>
+                                        <p class="reset-m">
+                                            Optiker finden
+                                        </p>
+                                    </button>
+                                    <button class="orderHistory-btn MainMenu__ActionsItem--order_history reset-mr" type="submit">
+                                        <i class="fa fa-repeat fa-fw" aria-hidden="true"></i>
+                                        <p class="reset-m">
+                                            Nach- bestellen
+                                        </p>
+                                    </button>
+                                </div>
+                            </nav>
+                            <!-- /MainMenu__Inner -->
+                            <div class="morph-dropdown-wrapper MainMenu__DropdownContainer">
+                                <div class="dropdown-list MainMenu__DropdownList js--dropdown-list">
+                                    <ul>
+                                        <li id="contacts" class="dropdown MainMenu__DropdownItem js--dropdown">
+                                            <div class="CategoryList__Title label">Kontaktlinsen</div>
+                                            <div class="content text-left MainMenu__DropdownItemContent js--content-size-selector">
+                                                <div class="row flex">
+                                                    <div class="col-lg-3 col-md-3 flex">
+                                                        <div class="CategoryList MainMenu__DropdownItemColumn">
+                                                            <h3 class="CategoryList__Header">Top brands</h3>
+                                                            <ul class="CategoryList__Manufacturers">
+                                                                <li class="CategoryList__Manufacturers--Item">
+                                                                    <a class="CategoryList__Manufacturers--link" href="https://www.lensvision.ch/en/Contact-Lenses/Acuvue/?force_sid=ms27bkrd3jes6n4qkktvnn05o0">
+                                                                    <img src="https://www.lensvision.ch/out/lv516/img/brands/Acuvue.png" alt="Acuvue">
+                                                                    </a>
+                                                                </li>
+                                                                <li class="CategoryList__Manufacturers--Item">
+                                                                    <a class="CategoryList__Manufacturers--link" href="https://www.lensvision.ch/en/Contact-Lenses/PureVision/?force_sid=ms27bkrd3jes6n4qkktvnn05o0">
+                                                                    <img src="https://www.lensvision.ch/out/lv516/img/brands/PureVision.png" alt="PureVision">
+                                                                    </a>
+                                                                </li>
+                                                                <li class="CategoryList__Manufacturers--Item">
+                                                                    <a class="CategoryList__Manufacturers--link" href="https://www.lensvision.ch/en/Contact-Lenses/Air-Optix/?force_sid=ms27bkrd3jes6n4qkktvnn05o0">
+                                                                    <img src="https://www.lensvision.ch/out/lv516/img/brands/Air-Optix.png" alt="Air Optix">
+                                                                    </a>
+                                                                </li>
+                                                                <li class="CategoryList__Manufacturers--Item">
+                                                                    <a class="CategoryList__Manufacturers--link" href="https://www.lensvision.ch/en/Contact-Lenses/Soflens/?force_sid=ms27bkrd3jes6n4qkktvnn05o0">
+                                                                    <img src="https://www.lensvision.ch/out/lv516/img/brands/Soflens.png" alt="Soflens">
+                                                                    </a>
+                                                                </li>
+                                                                <li class="CategoryList__Manufacturers--Item">
+                                                                    <a class="CategoryList__Manufacturers--link" href="https://www.lensvision.ch/en/Contact-Lenses/Biofinity/?force_sid=ms27bkrd3jes6n4qkktvnn05o0">
+                                                                    <img src="https://www.lensvision.ch/out/lv516/img/brands/Biofinity.png" alt="Biofinity">
+                                                                    </a>
+                                                                </li>
+                                                                <li class="CategoryList__Manufacturers--Item">
+                                                                    <a class="CategoryList__Manufacturers--link" href="https://www.lensvision.ch/en/Contact-Lenses/Dispo/?force_sid=ms27bkrd3jes6n4qkktvnn05o0">
+                                                                    <img src="https://www.lensvision.ch/out/lv516/img/brands/Dispo.png" alt="Dispo">
+                                                                    </a>
+                                                                </li>
+                                                                <li class="CategoryList__Manufacturers--Item">
+                                                                    <a class="CategoryList__Manufacturers--link" href="https://www.lensvision.ch/en/Contact-Lenses/Lensvision/?force_sid=ms27bkrd3jes6n4qkktvnn05o0">
+                                                                    <img src="https://www.lensvision.ch/out/lv516/img/brands/Lensvision.png" alt="Lensvision">
+                                                                    </a>
+                                                                </li>
+                                                                <li class="CategoryList__Manufacturers--Item">
+                                                                    <a class="CategoryList__Manufacturers--link" href="https://www.lensvision.ch/en/Contact-Lenses/Freshlook/?force_sid=ms27bkrd3jes6n4qkktvnn05o0">
+                                                                    <img src="https://www.lensvision.ch/out/lv516/img/brands/Freshlook.png" alt="Freshlook">
+                                                                    </a>
+                                                                </li>
+                                                                <li class="CategoryList__Manufacturers--Item">
+                                                                    <a class="CategoryList__Manufacturers--link" href="https://www.lensvision.ch/en/Contact-Lenses/FOCUS-DAILIES-Lenses/?force_sid=ms27bkrd3jes6n4qkktvnn05o0">
+                                                                    <img src="https://www.lensvision.ch/out/lv516/img/brands/FOCUS-DAILIES-Lenses.png" alt="FOCUS DAILIES Lenses">
+                                                                    </a>
+                                                                </li>
+                                                                <li class="CategoryList__Manufacturers--Item">
+                                                                    <a class="CategoryList__Manufacturers--link" href="https://www.lensvision.ch/en/Contact-Lenses/Biomedics/?force_sid=ms27bkrd3jes6n4qkktvnn05o0">
+                                                                    <img src="https://www.lensvision.ch/out/lv516/img/brands/Biomedics.png" alt="Biomedics">
+                                                                    </a>
+                                                                </li>
+                                                                <li class="CategoryList__Manufacturers--Item">
+                                                                    <a class="CategoryList__Manufacturers--link" href="https://www.lensvision.ch/en/Contact-Lenses/Proclear/?force_sid=ms27bkrd3jes6n4qkktvnn05o0">
+                                                                    <img src="https://www.lensvision.ch/out/lv516/img/brands/Proclear.png" alt="Proclear">
+                                                                    </a>
+                                                                </li>
+                                                                <li class="CategoryList__Manufacturers--Item">
+                                                                    <a class="CategoryList__Manufacturers--link CategoryList__Manufacturers--allBrands text-center" href="https://www.lensvision.ch/en/Contact-Lenses/?force_sid=ms27bkrd3jes6n4qkktvnn05o0">All Brands</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-12 hidden-from-1000">
+                                                        <div class="MainMenu__Divider"></div>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-3 col-sm-6 flex">
+                                                        <div class="MainMenu__DropdownItemColumn">
+                                                            <h3 class="CategoryList__Header">Period of wear</h3>
+                                                            <ul>
+                                                                <li class="CategoryList__Item">
+                                                                    <a href="https://www.lensvision.ch/en/Contact-Lenses/Daily-Disposable-Lenses/?force_sid=ms27bkrd3jes6n4qkktvnn05o0"> › Daily Disposable Lenses</a>
+                                                                </li>
+                                                                <li class="CategoryList__Item">
+                                                                    <a href="https://www.lensvision.ch/en/Contact-Lenses/2-Week-Disposable-Lenses/?force_sid=ms27bkrd3jes6n4qkktvnn05o0"> › 2 Week Disposable Lenses</a>
+                                                                </li>
+                                                                <li class="CategoryList__Item">
+                                                                    <a href="https://www.lensvision.ch/en/Contact-Lenses/Monthly-Disposable-Lenses/?force_sid=ms27bkrd3jes6n4qkktvnn05o0"> › Monthly Disposable Lenses</a>
+                                                                </li>
+                                                                <li class="CategoryList__Item">
+                                                                    <a href="https://www.lensvision.ch/en/Contact-Lenses/3-Month-disposable-lenses/?force_sid=ms27bkrd3jes6n4qkktvnn05o0"> › 3 Month disposable lenses</a>
+                                                                </li>
+                                                                <li class="CategoryList__Item">
+                                                                    <a href="https://www.lensvision.ch/en/Contact-Lenses/6-Month-disposable-lenses/?force_sid=ms27bkrd3jes6n4qkktvnn05o0"> › 6 Month disposable lenses</a>
+                                                                </li>
+                                                                <li class="CategoryList__Item">
+                                                                    <a href="https://www.lensvision.ch/en/Contact-Lenses/Long-term-lenses/?force_sid=ms27bkrd3jes6n4qkktvnn05o0"> › Long term lenses</a>
+                                                                </li>
+                                                                <li class="CategoryList__Item">
+                                                                    <a href="https://www.lensvision.ch/en/Contact-Lenses/Permanent-Lenses-24h/?force_sid=ms27bkrd3jes6n4qkktvnn05o0"> › Permanent Lenses 24h</a>
+                                                                </li>
+                                                            </ul>
+                                                            <h3 class="CategoryList__Header">Contact lenses services</h3>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-3 col-sm-6 flex">
+                                                        <div class="MainMenu__DropdownItemColumn">
+                                                            <h3 class="CategoryList__Header">Use</h3>
+                                                            <ul>
+                                                                <li class="CategoryList__Item">
+                                                                    <a href="https://www.lensvision.ch/en/Contact-Lenses/Daily-Disposable-Lenses/?force_sid=ms27bkrd3jes6n4qkktvnn05o0"> › Toric Contact Lensess</a>
+                                                                </li>
+                                                                <li class="CategoryList__Item">
+                                                                    <a href="https://www.lensvision.ch/en/Contact-Lenses/2-Week-Disposable-Lenses/?force_sid=ms27bkrd3jes6n4qkktvnn05o0"> › Multifocal Contact Lenses</a>
+                                                                </li>
+                                                                <li class="CategoryList__Item">
+                                                                    <a href="https://www.lensvision.ch/en/Contact-Lenses/Monthly-Disposable-Lenses/?force_sid=ms27bkrd3jes6n4qkktvnn05o0"> › Funlenseses</a>
+                                                                </li>
+                                                                <li class="CategoryList__Item">
+                                                                    <a href="https://www.lensvision.ch/en/Contact-Lenses/3-Month-disposable-lenses/?force_sid=ms27bkrd3jes6n4qkktvnn05o0"> › Colored Contact Lenses</a>
+                                                                </li>
+                                                            </ul>
+                                                            <h3 class="CategoryList__Header">Tips and advice</h3>
+                                                            <ul>
+                                                                <li class="CategoryList__Item">
+                                                                    <a href="https://www.lensvision.ch/en/Contact-Lenses/3-Month-disposable-lenses/?force_sid=ms27bkrd3jes6n4qkktvnn05o0"> › Generikas und Privatlabels</a>
+                                                                </li>
+                                                            </ul>
+                                                            <h3 class="CategoryList__Header">Bundle Rebate</h3>
+                                                            <ul>
+                                                                <li class="CategoryList__Item">
+                                                                    <a href="https://www.lensvision.ch/en/Contact-Lenses/6-Month-disposable-lenses/?force_sid=ms27bkrd3jes6n4qkktvnn05o0"> › 3 months</a>
+                                                                </li>
+                                                                <li class="CategoryList__Item">
+                                                                    <a href="https://www.lensvision.ch/en/Contact-Lenses/Long-term-lenses/?force_sid=ms27bkrd3jes6n4qkktvnn05o0"> › 6 months</a>
+                                                                </li>
+                                                            </ul>
+                                                            <h3 class="CategoryList__Header">Contact lenses services</h3>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-12 hidden-from-1000">
+                                                        <div class="MainMenu__Divider"></div>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-3">
+                                                        <ul>
+                                                            <li class="CategoryList__Item">
+                                                                <a href="/en/Contact-Lenses/Bundle-rebate/" title="Bundle rebate" class="CategoryList__Banner">
+                                                                <img src="img/sparset.jpg" alt="Bundle rebate">
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li id="careProducts" class="dropdown links MainMenu__DropdownItem js--dropdown">
+                                            <div class="CategoryList__Title label">Pflegemittel</div>
+                                            <div class="content text-left MainMenu__DropdownItemContent js--content-size-selector">
+                                                <div class="row flex">
+                                                    <div class="col-lg-3 col-md-3 flex">
+                                                        <div class="CategoryList MainMenu__DropdownItemColumn">
+                                                            <h3 class="CategoryList__Header">Top brands</h3>
+                                                            <ul class="CategoryList__Manufacturers">
+                                                                <li class="CategoryList__Manufacturers--Item">
+                                                                    <a class="CategoryList__Manufacturers--link" href="https://www.lensvision.ch/en/Lens-Care/AO-Sept-Plus/">
+                                                                    <img src="https://www.lensvision.ch/out/lv516/img/brands/AO-Sept-Plus.png" alt="AO Sept Plus">
+                                                                    </a>
+                                                                </li>
+                                                                <li class="CategoryList__Manufacturers--Item">
+                                                                    <a href="https://www.lensvision.ch/en/Lens-Care/Eyeye/" class="CategoryList__Manufacturers--link">
+                                                                    <img src="https://www.lensvision.ch/out/lv516/img/brands/Eyeye.png" alt="Eyeye">
+                                                                    </a>
+                                                                </li>
+                                                                <li class="CategoryList__Manufacturers--Item">
+                                                                    <a href="https://www.lensvision.ch/en/Lens-Care/Biotrue-All-in-One/" class="CategoryList__Manufacturers--link">
+                                                                    <img src="https://www.lensvision.ch/out/lv516/img/brands/Biotrue-All-in-One.png" alt="Biotrue All-in-One">
+                                                                    </a>
+                                                                </li>
+                                                                <li class="CategoryList__Manufacturers--Item">
+                                                                    <a href="https://www.lensvision.ch/en/Lens-Care/OptiFree/" class="CategoryList__Manufacturers--link">
+                                                                    <img src="https://www.lensvision.ch/out/lv516/img/brands/OptiFree.png" alt="OptiFree">
+                                                                    </a>
+                                                                </li>
+                                                                <li class="CategoryList__Manufacturers--Item">
+                                                                    <a href="https://www.lensvision.ch/en/Lens-Care/Complete/" class="CategoryList__Manufacturers--link">
+                                                                    <img src="https://www.lensvision.ch/out/lv516/img/brands/Complete.png" alt="Complete">
+                                                                    </a>
+                                                                </li>
+                                                                <li class="CategoryList__Manufacturers--Item">
+                                                                    <a href="https://www.lensvision.ch/en/Lens-Care/Oxysept-Comfort/" class="CategoryList__Manufacturers--link">
+                                                                    <img src="https://www.lensvision.ch/out/lv516/img/brands/Oxysept-Comfort.png" alt="Oxysept Comfort">
+                                                                    </a>
+                                                                </li>
+                                                                <li class="CategoryList__Manufacturers--Item">
+                                                                    <a href="https://www.lensvision.ch/en/Lens-Care/Lensvision-oxid/" class="CategoryList__Manufacturers--link">
+                                                                    <img src="https://www.lensvision.ch/out/lv516/img/brands/Lensvision.png" alt="Lensvision">
+                                                                    </a>
+                                                                </li>
+                                                                <li class="CategoryList__Manufacturers--Item">
+                                                                    <a href="https://www.lensvision.ch/en/Lens-Care/Solo-Care-Aqua/" class="CategoryList__Manufacturers--link">
+                                                                    <img src="https://www.lensvision.ch/out/lv516/img/brands/Solo-Care-Aqua.png" alt="Solo Care Aqua">
+                                                                    </a>
+                                                                </li>
+                                                                <li class="CategoryList__Manufacturers--Item">
+                                                                    <a href="https://www.lensvision.ch/en/Lens-Care/EasySept/" class="CategoryList__Manufacturers--link">
+                                                                    <img src="https://www.lensvision.ch/out/lv516/img/brands/EasySept.png" alt="EasySept">
+                                                                    </a>
+                                                                </li>
+                                                                <li class="CategoryList__Manufacturers--Item">
+                                                                    <a href="https://www.lensvision.ch/en/Lens-Care/" class="CategoryList__Manufacturers--link CategoryList__Manufacturers--allBrands text-center">All Brands</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-12 hidden-from-1000">
+                                                        <div class="MainMenu__Divider"></div>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-3 col-sm-6 flex">
+                                                        <div class="MainMenu__DropdownItemColumn">
+                                                            <h3 class="CategoryList__Header">Application</h3>
+                                                            <ul>
+                                                                <li class="CategoryList__Item">
+                                                                    <a href="https://www.lensvision.ch/en/Lens-Care/Peroxide-Systems/"> › Peroxide Systems</a>
+                                                                </li>
+                                                                <li class="CategoryList__Item">
+                                                                    <a href="https://www.lensvision.ch/en/Lens-Care/All-in-One-Solution/"> › All-in-One Solution</a>
+                                                                </li>
+                                                                <li class="CategoryList__Item">
+                                                                    <a href="https://www.lensvision.ch/en/Lens-Care/Saline-Solution/"> › Saline Solution</a>
+                                                                </li>
+                                                                <li class="CategoryList__Item">
+                                                                    <a href="https://www.lensvision.ch/en/Contact-Lenses/Rewetting-Dry-Eyes/"> › Rewetting - Dry Eyes</a>
+                                                                </li>
+                                                                <li class="CategoryList__Item">
+                                                                    <a href="https://www.lensvision.ch/en/Lens-Care/For-rigid-lenses/"> › For rigid lenses</a>
+                                                                </li>
+                                                                <li class="CategoryList__Item">
+                                                                    <a href="https://www.lensvision.ch/en/Lens-Care/Enzymatic-cleaners/"> › Enzymatic cleaners</a>
+                                                                </li>
+                                                                <li class="CategoryList__Item">
+                                                                    <a href="https://www.lensvision.ch/en/Lens-Care/Flight-Pack-Travel-Pack/"> › Flight Pack - Travel Pack</a>
+                                                                </li>
+                                                            </ul>
+                                                            <h3 class="CategoryList__Header">Accessories</h3>
+                                                            <ul>
+                                                                <li class="CategoryList__Item">
+                                                                    <a href="https://www.lensvision.ch/en/Lens-Care/Rewetting-Dry-Eyes/"> › Rewetting - Dry Eyes</a>
+                                                                </li>
+                                                                <li class="CategoryList__Item">
+                                                                    <a href="https://www.lensvision.ch/en/Lens-Care/Cases-for-Contact-Lenses/"> › Cases for Contact Lenses</a>
+                                                                </li>
+                                                                <li class="CategoryList__Item">
+                                                                    <a href="https://www.lensvision.ch/en/Lens-Care/Health-Care/"> › Health Care</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-3 col-sm-6 flex">
+                                                        <div class="MainMenu__DropdownItemColumn">
+                                                            <h3 class="CategoryList__Header">Manufacturers</h3>
+                                                            <ul>
+                                                                <li class="CategoryList__Item">
+                                                                    <a href="https://www.lensvision.ch/en/Lens-Care/Alcon/"> › Alcon</a>
+                                                                </li>
+                                                                <li class="CategoryList__Item">
+                                                                    <a href="https://www.lensvision.ch/en/Lens-Care/Allergan/"> › Allergan</a>
+                                                                </li>
+                                                                <li class="CategoryList__Item">
+                                                                    <a href="https://www.lensvision.ch/en/Lens-Care/AMO/"> › AMO</a>
+                                                                </li>
+                                                                <li class="CategoryList__Item">
+                                                                    <a href="https://www.lensvision.ch/en/Lens-Care/Avizor/"> › Avizor</a>
+                                                                </li>
+                                                                <li class="CategoryList__Item">
+                                                                    <a href="https://www.lensvision.ch/en/Lens-Care/Bausch-Lomb/"> › Bausch+Lomb</a>
+                                                                </li>
+                                                                <li class="CategoryList__Item">
+                                                                    <a href="https://www.lensvision.ch/en/Lens-Care/Contopharma/"> › Contopharma</a>
+                                                                </li>
+                                                                <li class="CategoryList__Item">
+                                                                    <a href="https://www.lensvision.ch/en/Lens-Care/Ciba-Vision/"> › Ciba Vision</a>
+                                                                </li>
+                                                                <li class="CategoryList__Item">
+                                                                    <a href="https://www.lensvision.ch/en/Lens-Care/Lensvision-oxid/"> › Lensvision</a>
+                                                                </li>
+                                                                <li class="CategoryList__Item">
+                                                                    <a href="https://www.lensvision.ch/en/Lens-Care/Menicon/"> › Menicon</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-12 hidden-from-1000">
+                                                        <div class="MainMenu__Divider"></div>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-3">
+                                                        <ul>
+                                                            <li class="CategoryList__Item">
+                                                                <a href="/en/Contact-Lenses/Bundle-rebate/" title="Bundle rebate" class="CategoryList__Banner">
+                                                                <img src="img/care-product-sale.jpg" alt="Bundle rebate">
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li id="sunglasses" class="dropdown button MainMenu__DropdownItem js--dropdown">
+                                            <div class="CategoryList__Title label">Sonnenbrillen</div>
+                                            <div class="content text-left MainMenu__DropdownItemContent js--content-size-selector">
+                                                <div class="row flex">
+                                                    <div class="col-lg- col-md-4 flex">
+                                                        <div class="CategoryList MainMenu__DropdownItemColumn">
+                                                            <h3 class="CategoryList__Header">Top brands</h3>
+                                                            <ul class="CategoryList__Manufacturers">
+                                                                <li class="CategoryList__Manufacturers--Item">
+                                                                    <a href="https://www.lensvision.ch/en/Sunglasses/Ray-Ban/" class="CategoryList__Manufacturers--link">
+                                                                    <img src="https://www.lensvision.ch/out/lv516/img/brands/Ray-Ban.png" alt="Ray-Ban">
+                                                                    </a>
+                                                                </li>
+                                                                <li class="CategoryList__Manufacturers--Item">
+                                                                    <a href="https://www.lensvision.ch/en/Sunglasses/Gloryfy/" class="CategoryList__Manufacturers--link">
+                                                                    <img src="https://www.lensvision.ch/out/lv516/img/brands/Gloryfy.png" alt="Gloryfy">
+                                                                    </a>
+                                                                </li>
+                                                                <li class="CategoryList__Manufacturers--Item">
+                                                                    <a href="https://www.lensvision.ch/en/Sunglasses/Oakley/" class="CategoryList__Manufacturers--link">
+                                                                    <img src="https://www.lensvision.ch/out/lv516/img/brands/Oakley.png" alt="Oakley">
+                                                                    </a>
+                                                                </li>
+                                                                <li class="CategoryList__Manufacturers--Item">
+                                                                    <a href="https://www.lensvision.ch/en/Sunglasses/Oliver-Peoples/" class="CategoryList__Manufacturers--link">
+                                                                    <img src="https://www.lensvision.ch/out/lv516/img/brands/Oliver-Peoples.png" alt="Oliver Peoples">
+                                                                    </a>
+                                                                </li>
+                                                                <li class="CategoryList__Manufacturers--Item">
+                                                                    <a href="https://www.lensvision.ch/en/Sunglasses/VIU/" class="CategoryList__Manufacturers--link">
+                                                                    <img src="https://www.lensvision.ch/out/lv516/img/brands/VIU.png" alt="VIU">
+                                                                    </a>
+                                                                </li>
+                                                                <li class="CategoryList__Manufacturers--Item">
+                                                                    <a href="https://www.lensvision.ch/en/Sunglasses/Prada/" class="CategoryList__Manufacturers--link">
+                                                                    <img src="https://www.lensvision.ch/out/lv516/img/brands/Prada.png" alt="Prada">
+                                                                    </a>
+                                                                </li>
+                                                                <li class="CategoryList__Manufacturers--Item">
+                                                                    <a href="https://www.lensvision.ch/en/Sunglasses/Persol/" class="CategoryList__Manufacturers--link">
+                                                                    <img src="https://www.lensvision.ch/out/lv516/img/brands/Persol.png" alt="Persol">
+                                                                    </a>
+                                                                </li>
+                                                                <li class="CategoryList__Manufacturers--Item">
+                                                                    <a href="https://www.lensvision.ch/en/Sunglasses/Polaroid/" class="CategoryList__Manufacturers--link">
+                                                                    <img src="https://www.lensvision.ch/out/lv516/img/brands/Polaroid.png" alt="Polaroid">
+                                                                    </a>
+                                                                </li>
+                                                                <li class="CategoryList__Manufacturers--Item">
+                                                                    <a href="https://www.lensvision.ch/en/Lens-Care/EasySept/" class="CategoryList__Manufacturers--link">
+                                                                    <img src="https://www.lensvision.ch/out/lv516/img/brands/EasySept.png" alt="EasySept">
+                                                                    </a>
+                                                                </li>
+                                                                <li class="CategoryList__Manufacturers--Item">
+                                                                    <a href="https://www.lensvision.ch/en/Sunglasses/adidas/" class="CategoryList__Manufacturers--link">
+                                                                    <img src="https://www.lensvision.ch/out/lv516/img/brands/adidas.png" alt="adidas">
+                                                                    </a>
+                                                                </li>
+                                                                <li class="CategoryList__Manufacturers--Item">
+                                                                    <a href="https://www.lensvision.ch/en/Sunglasses/Lensvision/" class="CategoryList__Manufacturers--link">
+                                                                    <img src="https://www.lensvision.ch/out/lv516/img/brands/Lensvision.png" alt="Lensvision">
+                                                                    </a>
+                                                                </li>
+                                                                <li class="CategoryList__Manufacturers--Item">
+                                                                    <a href="https://www.lensvision.ch/en/Lens-Care/" class="CategoryList__Manufacturers--link CategoryList__Manufacturers--allBrands text-center">All Brands</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-12 hidden-from-1000">
+                                                        <div class="MainMenu__Divider"></div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 flex">
+                                                        <div class="MainMenu__DropdownItemColumn">
+                                                            <h3 class="CategoryList__Header">Categories</h3>
+                                                            <ul>
+                                                                <li class="CategoryList__Item">
+                                                                    <a href="https://www.lensvision.ch/en/Sunglasses/Women-s-Sunglasses/"> › Women's Sunglasses</a>
+                                                                </li>
+                                                                <li class="CategoryList__Item">
+                                                                    <a href="https://www.lensvision.ch/en/Sunglasses/Men-s-Sunglasses/"> › Men's Sunglasses</a>
+                                                                </li>
+                                                                <li class="CategoryList__Item">
+                                                                    <a href="https://www.lensvision.ch/en/Sunglasses/Sunglasses-SALE/"> › Sunglasses SALE !</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-12 hidden-from-1000">
+                                                        <div class="MainMenu__Divider"></div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4">
+                                                        <ul>
+                                                            <li class="CategoryList__Item margin-tb-20">
+                                                                <div href="#" role="button" class="Products__Thumbnail">
+                                                                    <div class="Products__ImageWrap">
+                                                                        <img class="Products__Image" src="../img/sunglasses-1.jpg" alt="Products">
+                                                                    </div>
+                                                                    <div class="Products__Caption">
+                                                                        <p class="Products__SubTitle">LENSVISION SUNNY</p>
+                                                                        <p class="Products__SubTitle">Brown Glitter</p>
+                                                                        <span class="Products__OldPrice">
+                                                                            <del>61.00 CHF</del>
+                                                                        </span>
+                                                                    </div>
+                                                                    <p class="Products__Price">43.80 chf</p>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a href="magazinFront.html" class="CategoryList__Link label">Rategeber</a>
+                                        </li>
+                                    </ul>
+                                    <div class="bg-layer MainMenu__BgLayer js--bg-layer" aria-hidden="true"></div>
+                                </div>
+                                <!-- dropdown-list -->
+                            </div>
+                            <!-- morph-dropdown-wrapper -->
+                        </div>
+                        <!-- end container -->
+                    </div>
+                    <!-- Main nav -->
+                    <!-- Main nav buttons for tablets -->
+                    <div class="main-menu__buttons MainMenu__ActionsList MainMenu__ActionsList--tablets">
+                        <div class="col-sm-4">
+                            <button class="main-menu__buttons__item MainMenu__ActionsItem" role="button">
+                            <i class="fa fa-calendar-o fa-fw" aria-hidden="true"></i>
+                            Termin vereinbaren
+                            </button>
+                        </div>
+                        <div class="col-sm-4">
+                            <button class="main-menu__buttons__item MainMenu__ActionsItem" role="button">
+                            <i class="fa fa-location-arrow fa-fw" aria-hidden="true"></i>
+                            Optiker finden
+                            </button>
+                        </div>
+                        <div class="col-sm-4">
+                            <button class="orderHistory-btn MainMenu__ActionsItem--order_history" type="submit">
+                            <i class="fa fa-repeat fa-fw" aria-hidden="true"></i>
+                            Nachbestellen
+                            </button>
+                        </div>
+                    </div>
+                    <!--end main-nav__buttons -->
+                </section>
+                <section class="FrontBannerSection">
+                    <div class="FrontBannerSection__Banner--default">
+                        <div class="container">
+                            <div class="FrontBannerSection__Wrap">
+                                <div class="FrontBannerSection__Caption">
+                                    <h2 class="FrontBannerSection__Title reset-mt">Kontaktlinsen Ratgeber</h2>
+                                </div>
+                           </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="container">
+                        <ol class="Breadcrumb">
+                            <li class="Breadcrumb__Item"><a href="#" class="Breadcrumb__Link">Übersicht</a></li>
+                            <li class="Breadcrumb__Item"><a href="#" class="Breadcrumb__Link">Warum Kontaktlinsen</a></li>
+                        </ol>
+                    </div>
+                </section>
+                <section>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 col-sm-8">
+                                <div class="ReadMore">
+                                    <h2 class="title">
+                                        Vorteile von Kontaktlinsen
+                                    </h2>
+                                    <p class="sub-title ReadMore__SubTitle--gradient is-collapsed">
+                                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                                        sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                                        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
+                                        est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
+                                    </p>
+                                    <button class="ReadMore__Button js--show-content-trigger" type="button"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Jetzt weiterlesen</button>
+                                    <div class="ReadMore__Content is-collapsed">
+                                        <div class="embed-responsive embed-responsive-16by9 margin-t-20">
+                                            <iframe title="YouTube video player" class="youtube-player" type="text/html"
+                                              width="640" height="390" src="http://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+                                              frameborder="0" allowFullScreen>
+                                            </iframe>
+                                        </div>
+                                        <p class="margin-tb-20">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
+                                        <p class="sub-title">
+                                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                                            <a class="ReadMore__Link" href="#">magna aliquyam</a> erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+                                            no sea takimata sanctus est Lorem ipsum dolor sit amet. <a class="ReadMore__Link" href="#">Lorem ipsum</a> dolor sit amet, consetetur sadipscing elitr.
+                                        </p>
+                                        <p class="sub-title">
+                                            At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                                            <a class="ReadMore__Link" href="#">Lorem ipsum</a> dolor sit amet, consetetur sadipscing elitr.
+                                        </p>
+                                        <div class="SocialButtons margin-tb-20">
+                                            <button type="button" class="btn SocialButtons__Item SocialButtons--facebook darkBlue-bg">
+                                            <i class="fa fa-facebook fa-fw SocialButtons__Icon" aria-hidden="true"></i>
+                                            <span class="hidden-xs--portrait">Share</span>
+                                            </button>
+                                            <button type="button" class="btn SocialButtons__Item SocialButtons--twitter lightBlue-bg">
+                                            <i class="fa fa-twitter fa-fw SocialButtons__Icon" aria-hidden="true"></i>
+                                            <span class="hidden-xs--portrait">Tweet</span>
+                                            </button>
+                                            <button type="button" class="btn SocialButtons__Item SocialButtons--whatsapp lightgreen1-bg">
+                                            <i class="fa fa-whatsapp fa-fw SocialButtons__Icon" aria-hidden="true"></i>
+                                            <span class="hidden-xs--portrait">Share</span>
+                                            </button>
+                                            <button type="button" class="btn SocialButtons__Item SocialButtons--email gray1-bg">
+                                            <i class="fa fa-envelope-o fa-fw SocialButtons__Icon" aria-hidden="true"></i>
+                                            <span class="hidden-xs--portrait">Email</span>
+                                            </button>
+                                            <button type="button" class="btn SocialButtons__Item SocialButtons--share lightgreen2-bg">
+                                            <i class="fa fa-share-alt fa-fw SocialButtons__Icon" aria-hidden="true"></i>
+                                            <span class="hidden-xs--portrait">Share</span>
+                                            </button>
+                                        </div>
+                                        <div class="ReadMore__Autor">
+                                            <div class="media">
+                                                <div class="ReadMore__ImageWrap">
+                                                    <a href="#">
+                                                    <img class="ReadMore__AutorPhoto img-circle media-object" src="img/features-img-1.jpg" alt="Autor Photo">
+                                                    </a>
+                                                </div>
+                                                <div class="media-body">
+                                                    <a class="ReadMore__Link" href="#">Über den Autor</a>
+                                                    <h2 class="media-heading title">Prof. Dr. Lorem Ipsum</h2>
+                                                    <p class="ReadMore__AutorText">Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                                                        sed diam nonumy eirmod tempor invidunt. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                                                        diam nonumy eirmod tempor invidunt. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ReadMore__NextArticle">
+                                            <a class="ReadMore__Link" href="#">Nächster Artikel</a>
+                                            <h2 class="title">Für wen kommen Kontaktlinsen in Frage?</h2>
+                                            <p class="sub-title">
+                                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+                                                sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
+                                                ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                                            </p>
+                                            <button id="ReadMore" class="ReadMore__Button is-collapsed" type="buttom"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Jetzt weiterlesen</button>
+                                        </div>
+                                    </div>
+                                    <!-- end ReadMore__Content -->
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4">
+                                <div class="ReadMore__Content is-collapsed">
+                                    <div class="ReadMore__LiveChat margin-b-20 padding-20">
+                                        <h2 class="ReadMore__LiveChat--title">Fragen sie die Expertin</h2>
+                                        <p class="LiveChat__Description">Starten Sie den Chat mit unserer Expertin Sybille Wymann, eidgenössische Augenoptikerin.</p>
+                                        <form>
+                                            <textarea class="LiveChat__Textarea" rows="4" placeholder="Frage eingeben..."></textarea>
+                                            <button class="btn LiveChat__Button" type="submit">Absenden</button>
+                                        </form>
+                                        <div class="LiveChat__ExpertInfo full-width margin-t-20">
+                                            <span class="LiveChat__Schedule">Kostenloses Fachgespräch</span>
+                                            <p class="LiveChat__ContactNo">
+                                                <i class="fa fa-phone fa-lg fa-fw customer-service-policy-mobile__icon" aria-hidden="true"></i>
+                                                0800 20 20 15
+                                            </p>
+                                            <span class="LiveChat__Schedule">Montag - Freitag</span>
+                                            <span class="LiveChat__Schedule">9:00-17:00 Uhr</span>
+                                        </div>
+                                    </div>
+                                    <div class="ReadMore__PersonalAppointment padding-20 margin-b-20">
+                                        <h2 class="ReadMore__LiveChat--title">Persönlicher Termin</h2>
+                                        <p class="LiveChat__Description">Neuanpassungen der Kontaktlinsen, Nachanpassung der Kontaktlinsen oder
+                                            Augenkontrolle - vereinbaren sie jetzt onine ihren Termin.
+                                        </p>
+                                        <button class="btn ReadMore__PersonalAppointment__Button" type="submit">Termin vereinbaren</button>
+                                    </div>
+                                </div>
+                                <div class="Ebook padding-20">
+                                    <img class="center-block" src="img/ebook.png" alt="Ebook">
+                                    <h4 class="Ebook__Title margin-t-20">Kostenloses Ebook</h4>
+                                    <p class="Ebook__Text">At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                                    <a class="btn Ebook__Button" href="#" role="button">Jetzt herunterladen</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end container -->
+                </section>
+                <section>
+                    <div class="container">
+                        <h2 class="title">Weitere Ratgeberartikel</h2>
+                        <div class="dropdown TabbedContentBox">
+                            <button class="btn dropdown-toggle TabbedContentBox__Dropdown js--categories-dropdown-button" type="button" data-toggle="dropdown">Warum Kontaktlinsen?
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="nav nav-tabs TabbedContentBox__NavTabsList">
+                                <li class="TabbedContentBox__NavTabsItem active" data-tab="reviews"><a href="#reviews" data-toggle="tab">Ratgeber Übersicht</a></li>
+                                <li class="TabbedContentBox__NavTabsItem" data-tab="why-contact-lenses"><a href="#why-contact-lenses" data-toggle="tab">Warum Kontaktlinsen?</a></li>
+                                <li class="TabbedContentBox__NavTabsItem" data-tab="find-contact-lenses"><a href="#find-contact-lenses" data-toggle="tab">Der Weg zur Kontaktlinse</a></li>
+                                <li class="TabbedContentBox__NavTabsItem" data-tab="contact-lenses-types"><a href="#contact-lenses-types" data-toggle="tab">Kontaktlinsen-Arten</a></li>
+                                <li class="TabbedContentBox__NavTabsItem" data-tab="tips-to-wear-and-care"><a href="#tips-to-wear-and-care" data-toggle="tab">Tipps zum Tragen & Pflegen</a></li>
+                                <li class="TabbedContentBox__NavTabsItem" data-tab="help-with-complains"><a href="#help-with-complains" data-toggle="tab">Hilfe bei Beschwerden</a></li>
+                            </ul>
+                            <div class="TabbedContentBox__NavTabsContent">
+                                <div class="TabbedContentBox__NavTabsPane active js--tabbed-content-box-pane-selector" id="reviews" data-draggable="true">
+                                    <ul class="" id="reviews-jPage">
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Vorteile Kontaktlinsen</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Für wen kommen Kontaktlinsen in Frage? </a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Sehe ich mit Kontaktlinsen schlechter als mit Brille?</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Wie gesund sind Kontaktlinsen?</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Kosten Kontaktlinsen vs Brille</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Kontaktlinsen und Hornhautverkrümmung</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Kontaktlinsen und Alterssichtigkeit</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Vorteile Kontaktlinsen</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Für wen kommen Kontaktlinsen in Frage? </a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Sehe ich mit Kontaktlinsen schlechter als mit Brille?</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Wie gesund sind Kontaktlinsen?</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Kosten Kontaktlinsen vs Brille</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Kontaktlinsen und Hornhautverkrümmung</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Kontaktlinsen und Alterssichtigkeit</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Kontaktlinsen für Kinder</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Kontaktlinsen für Kinder</a></li>
+                                    </ul>
+                                    <div class="ItemsPerPage__Holder js--holder-jPage"></div>
+                                </div>
+                                <div class="TabbedContentBox__NavTabsPane js--tabbed-content-box-pane-selector" id="why-contact-lenses" data-draggable="true">
+                                    <ul class="" id="why-contact-lenses-jPage">
+                                        <li class="TabbedContentBox__ContentItem"><a href="#" class="TabbedContentBox__Link"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Vorteile Kontaktlinsen</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Für wen kommen Kontaktlinsen in Frage? </a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Sehe ich mit Kontaktlinsen schlechter als mit Brille?</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Kontaktlinsen und Hornhautverkrümmung</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Kontaktlinsen und Alterssichtigkeit</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Kontaktlinsen für Kinder</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Vorteile Kontaktlinsen</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Für wen kommen Kontaktlinsen in Frage? </a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Sehe ich mit Kontaktlinsen schlechter als mit Brille?</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Wie gesund sind Kontaktlinsen?</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Kosten Kontaktlinsen vs Brille</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Kontaktlinsen und Hornhautverkrümmung</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Kontaktlinsen und Alterssichtigkeit</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Kontaktlinsen für Kinder</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Vorteile Kontaktlinsen</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Für wen kommen Kontaktlinsen in Frage? </a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Sehe ich mit Kontaktlinsen schlechter als mit Brille?</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Wie gesund sind Kontaktlinsen?</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Kosten Kontaktlinsen vs Brille</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Kontaktlinsen und Hornhautverkrümmung</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Kontaktlinsen und Alterssichtigkeit</a>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Vorteile Kontaktlinsen</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Für wen kommen Kontaktlinsen in Frage? </a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Sehe ich mit Kontaktlinsen schlechter als mit Brille?</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Wie gesund sind Kontaktlinsen?</a></li>
+                                    </ul>
+                                    <div class="ItemsPerPage__Holder js--holder-jPage"></div>
+                                </div>
+                                <div class="TabbedContentBox__NavTabsPane js--tabbed-content-box-pane-selector" id="find-contact-lenses" data-draggable="true">
+                                    <ul id="find-contact-lenses-jPage">
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Sehe ich mit Kontaktlinsen schlechter als mit Brille?</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Wie gesund sind Kontaktlinsen?</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Kosten Kontaktlinsen vs Brille</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Kontaktlinsen und Hornhautverkrümmung</a></li>
+                                    </ul>
+                                    <div class="ItemsPerPage__Holder js--holder-jPage"></div>
+                                </div>
+                                <div class="TabbedContentBox__NavTabsPane js--tabbed-content-box-pane-selector" id="contact-lenses-types" data-draggable="true">
+                                    <ul id="contact-lenses-types-jPage">
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Vorteile Kontaktlinsen</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Für wen kommen Kontaktlinsen in Frage? </a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Sehe ich mit Kontaktlinsen schlechter als mit Brille?</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Wie gesund sind Kontaktlinsen?</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Kosten Kontaktlinsen vs Brille</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Kontaktlinsen und Hornhautverkrümmung</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Kontaktlinsen und Alterssichtigkeit</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Kontaktlinsen für Kinder</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Vorteile Kontaktlinsen</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Für wen kommen Kontaktlinsen in Frage? </a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Sehe ich mit Kontaktlinsen schlechter als mit Brille?</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Wie gesund sind Kontaktlinsen?</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Kosten Kontaktlinsen vs Brille</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Kontaktlinsen und Hornhautverkrümmung</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Kontaktlinsen und Alterssichtigkeit</a>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Vorteile Kontaktlinsen</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Für wen kommen Kontaktlinsen in Frage? </a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Sehe ich mit Kontaktlinsen schlechter als mit Brille?</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Wie gesund sind Kontaktlinsen?</a></li>
+                                    </ul>
+                                    <div class="ItemsPerPage__Holder js--holder-jPage"></div>
+                                </div>
+                                <div class="TabbedContentBox__NavTabsPane js--tabbed-content-box-pane-selector" id="tips-to-wear-and-care" data-draggable="true">
+                                    <ul id="tips-to-wear-and-care-jPage">
+                                        <li class="TabbedContentBox__ContentItem"><a href="#" class="TabbedContentBox__Link"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Sehe ich mit Kontaktlinsen schlechter als mit Brille?</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#" class="TabbedContentBox__Link"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Wie gesund sind Kontaktlinsen?</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Kosten Kontaktlinsen vs Brille</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Kontaktlinsen und Hornhautverkrümmung</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Sehe ich mit Kontaktlinsen schlechter als mit Brille?</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Wie gesund sind Kontaktlinsen?</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Kosten Kontaktlinsen vs Brille</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Kontaktlinsen und Hornhautverkrümmung</a></li>
+                                    </ul>
+                                    <div class="ItemsPerPage__Holder js--holder-jPage"></div>
+                                </div>
+                                <div class="TabbedContentBox__NavTabsPane js--tabbed-content-box-pane-selector" id="help-with-complains" data-draggable="true">
+                                    <ul id="help-with-complains-jPage">
+                                        <li class="TabbedContentBox__ContentItem"><a href="#" class="TabbedContentBox__Link"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Sehe ich mit Kontaktlinsen schlechter als mit Brille?</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Wie gesund sind Kontaktlinsen?</a></li>
+                                        <li class="TabbedContentBox__ContentItem"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Kosten Kontaktlinsen vs Brille</a></li>
+                                    </ul>
+                                    <div class="ItemsPerPage__Holder js--holder-jPage"></div>
+                                </div>
+                            </div>
+                            <!-- /tab-content -->
+                        </div>
+                        <!-- /tabbable -->
+                        <!-- <div class="TabbedContentBox light-bg padding-20 margin-tb-20">
+                            </div> -->
+                    </div>
+                </section>
+                <section class="Services">
+                    <div class="container">
+                        <h2 class="title">Services</h2>
+                        <div class="row">
+                            <div class="col-md-4 col-sm-4">
+                                <div class="Services__Thumbnail">
+                                    <img class="Services__Image" src="img/services-img-1.jpg" alt="Services">
+                                    <div class="Services__Caption">
+                                        <h4 class="title">Neuanpassung Kontaktlinsen</h4>
+                                        <p class="Services__Description">Ihre aktuelle Sehkorrektur wird bestimmt, um die entsprechende Anpassung zu wählen.</p>
+                                        <p><a href="#" class="btn Services__Button" role="button">Termin vereinbaren</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4">
+                                <div class="Services__Thumbnail">
+                                    <img class="Services__Image" src="img/services-img-2.jpg" alt="Services">
+                                    <div class="Services__Caption">
+                                        <h4 class="title">Nachanpassung Kontakt-linsen</h4>
+                                        <p class="Services__Description">Der perfekte Sitz der Kontaktlinse und die optimalste Sehsicht wird überprüft und entsprechend angepasst.</p>
+                                        <p><a href="#" class="btn Services__Button" role="button">Termin vereinbaren</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4">
+                                <div class="Services__Thumbnail">
+                                    <img class="Services__Image" src="img/services-img-3.jpg" alt="Services">
+                                    <div class="Services__Caption">
+                                        <h4 class="title">Augenkontrolle</h4>
+                                        <p class="Services__Description">Kontrolle Ihrer aktuellen Sehkorrektur um festzustellen, ob Sehvermögen dem aktuellen Produkt entspricht.</p>
+                                        <p><a href="#" class="btn Services__Button" role="button">Termin vereinbaren</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="Products">
+                    <div class="container">
+                        <h2 class="title">Beliebte Kontaktlins</h2>
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6 col-xs-6--landscape">
+                                <a href="#" role="button" class="Products__Thumbnail">
+                                    <div class="Products__ImageWrap">
+                                        <img class="Products__Image" src="img/products-1.jpg" alt="Products">
+                                    </div>
+                                    <div class="Products__Caption">
+                                        <h4 class="Products__Title">Focus Dailies All Day Comfort</h4>
+                                        <p class="Products__SubTitle">30 Monatslinsen</p>
+                                        <span class="Products__OldPrice">
+                                        <del>61.00 CHF</del>
+                                        </span>
+                                    </div>
+                                    <p class="Products__Price">43.80 chf</p>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-6 col-xs-6--landscape">
+                                <a href="#" role="button" class="Products__Thumbnail">
+                                    <div class="Products__ImageWrap">
+                                        <img class="Products__Image" src="img/products-2.jpg" alt="Products">
+                                    </div>
+                                    <div class="Products__Caption">
+                                        <h4 class="Products__Title">Focus Dailies All Day Comfort</h4>
+                                        <p class="Products__SubTitle">30 Monatslinsen</p>
+                                        <span class="Products__OldPrice">
+                                        <del>61.00 CHF</del>
+                                        </span>
+                                    </div>
+                                    <p class="Products__Price">43.80 chf</p>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-6 col-xs-6--landscape">
+                                <a href="#" role="button" class="Products__Thumbnail">
+                                    <div class="Products__ImageWrap">
+                                        <img class="Products__Image" src="img/products-3.jpg" alt="Products">
+                                    </div>
+                                    <div class="Products__Caption">
+                                        <h4 class="Products__Title">Focus Dailies All Day Comfort</h4>
+                                        <p class="Products__SubTitle">30 Monatslinsen</p>
+                                    </div>
+                                    <p class="Products__Price">43.80 chf</p>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-6 col-xs-6--landscape">
+                                <a href="#" role="button" class="Products__Thumbnail">
+                                    <div class="Products__ImageWrap">
+                                        <img class="Products__Image" src="img/products-4.jpg" alt="Products">
+                                    </div>
+                                    <div class="Products__Caption">
+                                        <h4 class="Products__Title">Focus Dailies All Day Comfort</h4>
+                                        <p class="Products__SubTitle">30 Monatslinsen</p>
+                                    </div>
+                                    <p class="Products__Price">43.80 chf</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6 col-xs-6--landscape">
+                                <a href="#" role="button" class="Products__Thumbnail">
+                                    <div class="Products__ImageWrap">
+                                        <img class="Products__Image" src="img/products-3.jpg" alt="Products">
+                                    </div>
+                                    <div class="Products__Caption">
+                                        <h4 class="Products__Title">Focus Dailies All Day Comfort</h4>
+                                        <p class="Products__SubTitle">30 Monatslinsen</p>
+                                    </div>
+                                    <p class="Products__Price">43.80 chf</p>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-6 col-xs-6--landscape">
+                                <a href="#" role="button" class="Products__Thumbnail">
+                                    <div class="Products__ImageWrap">
+                                        <img class="Products__Image" src="img/products-1.jpg" alt="Products">
+                                    </div>
+                                    <div class="Products__Caption">
+                                        <h4 class="Products__Title">Focus Dailies All Day Comfort</h4>
+                                        <p class="Products__SubTitle">30 Monatslinsen</p>
+                                        <span class="Products__OldPrice">
+                                        <del>61.00 CHF</del>
+                                        </span>
+                                    </div>
+                                    <p class="Products__Price">43.80 chf</p>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-6 col-xs-6--landscape">
+                                <a href="#" role="button" class="Products__Thumbnail">
+                                    <div class="Products__ImageWrap">
+                                        <img class="Products__Image" src="img/products-4.jpg" alt="Products">
+                                    </div>
+                                    <div class="Products__Caption">
+                                        <h4 class="Products__Title">Focus Dailies All Day Comfort</h4>
+                                        <p class="Products__SubTitle">30 Monatslinsen</p>
+                                        <span class="Products__OldPrice">
+                                        <del>61.00 CHF</del>
+                                        </span>
+                                    </div>
+                                    <p class="Products__Price">43.80 chf</p>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-6 col-xs-6--landscape">
+                                <a href="#" role="button" class="Products__Thumbnail">
+                                    <div class="Products__ImageWrap">
+                                        <img class="Products__Image" src="img/products-2.jpg" alt="Products">
+                                    </div>
+                                    <div class="Products__Caption">
+                                        <h4 class="Products__Title">Focus Dailies All Day Comfort</h4>
+                                        <p class="Products__SubTitle">30 Monatslinsen</p>
+                                    </div>
+                                    <p class="Products__Price">43.80 chf</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <a class="btn Products__Button" href="#" role="button">Mehr Linsen</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="AdvertizingBlock">
+                    <div class="AdvertizingBlock__BgImage visible-lg-block visible-md-block"></div>
+                    <div class="container">
+                        <h2 class="title">Dies ist Lensvision</h2>
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6">
+                                <div class="AdvertizingBlock__Wrap">
+                                    <span class="AdvertizingBlock__TotalCount">80+</span>
+                                    <p class="AdvertizingBlock__CountDescription">Partneroptiker in ihrer Nähe</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="AdvertizingBlock__Wrap">
+                                    <span class="AdvertizingBlock__TotalCount">75’000+</span>
+                                    <p class="AdvertizingBlock__CountDescription">zufriendene Kunden</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="AdvertizingBlock__Wrap">
+                                    <span class="AdvertizingBlock__TotalCount">20</span>
+                                    <p class="AdvertizingBlock__CountDescription">Kontaktlinsen Marken</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="AdvertizingBlock__Wrap">
+                                    <span class="AdvertizingBlock__TotalCount">180’000</span>
+                                    <p class="AdvertizingBlock__CountDescription">verkaufte Kontaktlinsen im Monat</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="LiveChat">
+                    <div class="container">
+                        <h2 class="title">Fragen sie die Expertin</h2>
+                        <div class="row">
+                            <div class="col-md-7 col-sm-6">
+                                <h4 class="LiveChat__SubTitle">Live Chat</h4>
+                                <p class="LiveChat__Description">Starten Sie den Chat mit unserer Expertin Sybille Wymann, eidgenössische Augenoptikerin.</p>
+                                <form>
+                                    <textarea class="LiveChat__Textarea" rows="4" placeholder="Frage eingeben..."></textarea>
+                                    <button class="btn LiveChat__Button" type="submit">Absenden</button>
+                                </form>
+                            </div>
+                            <div class="LiveChat__Expert">
+                                <img class="img-responsive LiveChat__ExpertPhoto" src="img/staff-photo-big.png">
+                            </div>
+                            <div class="col-md-5 col-sm-6 clearfix">
+                                <div class="LiveChat__ExpertInfo pull-right">
+                                    <p>
+                                        <span class="LiveChat__ExpertName">Sybille Wymann</span>
+                                        <span class="LiveChat__ExpertName">eidg. Augenoptikerin</span>
+                                    </p>
+                                    <span class="LiveChat__Schedule">Kostenloses Fachgespräch</span>
+                                    <p class="LiveChat__ContactNo">
+                                        <i class="fa fa-phone fa-lg fa-fw customer-service-policy-mobile__icon" aria-hidden="true"></i>
+                                        0800 20 20 15
+                                    </p>
+                                    <span class="LiveChat__Schedule">Montag - Freitag</span>
+                                    <span class="LiveChat__Schedule">9:00-17:00 Uhr</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="Ratings">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <img class="Ratings__Badge" src="img/rating-badge.jpg" alt="rating badge">
+                            </div>
+                            <div class="col-md-2 col-sm-6 col-xs-6--landscape">
+                                <div class="Ratings__Date">
+                                    <span>15.02.17</span>
+                                    <input id="input-3" name="input-3" value="4">
+                                </div>
+                                <p class="Ratings__Text">Alles sehr gut geklappt.</p>
+                            </div>
+                            <div class="col-md-2 col-sm-6 col-xs-6--landscape">
+                                <div class="Ratings__Date">
+                                    <span>15.02.17</span>
+                                    <input id="input-1" name="input-1" value="5">
+                                </div>
+                                <p class="Ratings__Text">Wie immer sehr guter Service und Beratung und auch die Kundenbetreuung ist hervorragend, die Preise sind sehr g...</p>
+                            </div>
+                            <div class="col-md-2 col-sm-6 col-xs-6--landscape">
+                                <div class="Ratings__Date">
+                                    <span>15.02.17</span>
+                                    <input id="input-2" name="input-2" value="5">
+                                </div>
+                                <p class="Ratings__Text">Ich bin sehr zufrieden.</p>
+                            </div>
+                            <div class="col-md-2 col-sm-6 col-xs-6--landscape">
+                                <div class="Ratings__Date">
+                                    <span>15.02.17</span>
+                                    <input id="input-4" name="input-4" value="3">
+                                </div>
+                                <p class="Ratings__Text">Alles gut.</p>
+                            </div>
+                            <div class="col-md-2 hidden-sm hidden-xs--landscape">
+                                <div class="Ratings__Date">
+                                    <span>15.02.17</span>
+                                    <input id="input-5" name="input-5" value="5">
+                                </div>
+                                <p class="Ratings__Text">Wie immer sehr guter Service und Beratung und auch die Kundenbetreuung ist hervorragend, die Preise sind sehr g...</p>
+                            </div>
+                        </div>
+                        <p class="Ratings__Review">
+                            <span itemscope="" itemtype="http://data-vocabulary.org/Review">
+                            <span itemprop="itemreviewed">www.lensvision.ch</span> - <span itemprop="reviewer">Trusted Shops</span>
+                            <span itemprop="rating" itemscope="" itemtype="http://data-vocabulary.org/Rating">
+                            Rating: <span itemprop="value">4.82</span> from <span itemprop="best">5</span>
+                            - 806 reviews
+                            </span>
+                            </span>
+                        </p>
+                    </div>
+                </section>
+                <footer>
+                    <div class="Footer">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-4 col-sm-12">
+                                    <div class="Footer__Navigation col-md-10 reset-pl">
+                                        <h6 class="Footer__Navigation--Title">Verbinden sie sich mit uns</h6>
+                                        <ul class="list-unstyled">
+                                            <li class="Footer__Navigation--Item">
+                                                <a class="Footer__Navigation--Link" href="#" role="button">Jetzt Newsletter abonnieren und CHF 10 Gutschein erhalten</a>
+                                            </li>
+                                            <li class="Footer__Navigation--Item">
+                                                <form>
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control Footer__Navigation--SearchInput" placeholder="Ihre Emailadresse">
+                                                        <span class="input-group-btn">
+                                                        <button class="btn btn-default Footer__Navigation--SearchButton" type="button">Ok</button>
+                                                        </span>
+                                                    </div>
+                                                    <!-- /input-group -->
+                                                </form>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- Footer__Navigation -->
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="Footer__Navigation">
+                                        <h6 class="Footer__Navigation--Title">Weitere interessante Links</h6>
+                                        <ul class="list-unstyled">
+                                            <li class="Footer__Navigation--Item">
+                                                <a class="Footer__Navigation--Link" href="#" role="button">Besser sehen mit Kontaktlinsen</a>
+                                            </li>
+                                            <li class="Footer__Navigation--Item">
+                                                <a class="Footer__Navigation--Link" href="#" role="button">Komfort von Kontaktlinsen</a>
+                                            </li>
+                                            <li class="Footer__Navigation--Item">
+                                                <a class="Footer__Navigation--Link" href="#" role="button">Kontaktlinsen & Sport</a>
+                                            </li>
+                                            <li class="Footer__Navigation--Item">
+                                                <a class="Footer__Navigation--Link" href="#" role="button">Besser aussehen mit Linsen</a>
+                                            </li>
+                                            <li class="Footer__Navigation--Item">
+                                                <a class="Footer__Navigation--Link" href="#" role="button">Farbige Kontaktlinsen</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- Footer__Navigation -->
+                                </div>
+                                <div class="col-md-5 col-sm-6">
+                                    <div class="Footer__Navigation col-md-11 col-md-offset-1 reset-pl reset-pr">
+                                        <h6 class="Footer__Navigation--Title">Professionelle Beratung</h6>
+                                        <ul class="list-unstyled">
+                                            <li class="Footer__Navigation--Item">
+                                                <a class="Footer__Navigation--Link" href="#" role="button">Fragen sie unsere Augenoptikerinnen!</a>
+                                            </li>
+                                            <li>
+                                                <div class="Footer__Navigation--ContactInfo">
+                                                    <h6>Email</h6>
+                                                    <span>info@lensvision.ch</span>
+                                                    <br><br>
+                                                    <h6>Telefon-Hotline</h6>
+                                                    <span>044 261 55 00</span> <br>
+                                                    <span>Mo-Fr von 9-18 Uhr</span>
+                                                    <div class="Footer__Navigation--StaffWrap">
+                                                        <img class="pull-right Footer__Navigation--StaffWrap--Photo" src="img/staff-photo.jpg"> <br>
+                                                        <span class="pull-right">Sybille Wymann</span> <br>
+                                                        <span class="pull-right">eidg.Augenoptikerin</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- footer__navigation -->
+                                </div>
+                            </div>
+                            <div class="Footer__SearchBlock">
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-6">
+                                        <div class="Footer__SearchBlock--Text">
+                                            <i class="fa fa-location-arrow fa-fw fa-lg" aria-hidden="true"></i>
+                                            <span>Partneroptiker in ihrer Nähe finden</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6">
+                                        <form>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control Footer__SearchBlock--Input" placeholder="PLZ oder Ort eingeben">
+                                                <span class="input-group-btn">
+                                                <button class="btn btn-default Footer__SearchBlock--Button" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                                </span>
+                                            </div>
+                                            <!-- /input-group -->
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- footer__search-block -->
+                            <div class="Footer__PaymentMethodsAndCertificates">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h6 class="Footer__PaymentMethodsAndCertificates--Title">Zahlungsarten</h6>
+                                        <ul class="list-inline">
+                                            <li class="Footer__PaymentMethodsAndCertificates--Item">
+                                                <img class="img-responsive" src="img/paypal.jpg" alt="payment-methods">
+                                            </li>
+                                            <li class="Footer__PaymentMethodsAndCertificates--Item">
+                                                <img class="img-responsive" src="img/payment-method-2.jpg" alt="payment-methods">
+                                            </li>
+                                            <li class="Footer__PaymentMethodsAndCertificates--Item">
+                                                <img class="img-responsive" src="img/viza.jpg" alt="payment-methods">
+                                            </li>
+                                            <li class="Footer__PaymentMethodsAndCertificates--Item">
+                                                <img class="img-responsive" src="img/mastercard.jpg" alt="payment-methods">
+                                            </li>
+                                            <li class="Footer__PaymentMethodsAndCertificates--Item">
+                                                <img class="img-responsive" src="img/payment-metod-5.jpg" alt="payment-methods">
+                                            </li>
+                                            <li class="Footer__PaymentMethodsAndCertificates--Item">
+                                                <img class="img-responsive" src="img/payment-metod-6.jpg" alt="payment-methods">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6 class="Footer__PaymentMethodsAndCertificates--Title">Zertifikate</h6>
+                                        <ul class="list-inline">
+                                            <li class="Footer__PaymentMethodsAndCertificates--Item">
+                                                <img class="img-responsive" src="img/certificate-1.jpg" alt="certificates">
+                                            </li>
+                                            <li class="Footer__PaymentMethodsAndCertificates--Item">
+                                                <img class="img-responsive" src="img/certificate-2.jpg" alt="certificates">
+                                            </li>
+                                            <li class="Footer__PaymentMethodsAndCertificates--Item">
+                                                <img class="img-responsive" src="img/certificate-3.jpg" alt="certificates">
+                                            </li>
+                                            <li class="Footer__PaymentMethodsAndCertificates--Item">
+                                                <img class="img-responsive" src="img/certificate-4.jpg" alt="certificates">
+                                            </li>
+                                            <li class="Footer__PaymentMethodsAndCertificates--Item">
+                                                <img class="img-responsive" src="img/certificate-5.jpg" alt="certificates">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end payment-methods-and-certificates -->
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6">
+                                    <div id="copyright"></div>
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="Footer__Navigation">
+                                        <ul class="list-inline">
+                                            <li>
+                                                <a class="Footer__Navigation--Link" href="#" role="button">ACB</a>
+                                            </li>
+                                            <li>
+                                                <a class="Footer__Navigation--Link" href="#" role="button">Sitemap</a>
+                                            </li>
+                                            <li>
+                                                <a class="Footer__Navigation--Link" href="#" role="button">Impressum</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end container -->
+                    </div>
+                    <!-- end footer -->
+                </footer>
+            </div>
+            <!-- end Snap content -->
+        </div>
+        <!-- snap-drawers -->
+        <script type="text/javascript" src="src/js/modernizr.js"></script>
+        <script type="text/javascript" src="src/js/jquery-2.2.4.js"></script>
+        <script type="text/javascript" src="src/js/moment.js"></script>
+        <script type="text/javascript" src="src/js/bootstrap.min.js"></script>
+        <!-- <script type="text/javascript" src="js/old.js"></script> -->
+        <script type="text/javascript" src="src/js/mobile-device-detector.js"></script>
+        <script type="text/javascript" src="src/js/snap.js"></script>
+        <script type="text/javascript" src="src/js/modernizr.custom.js"></script>
+        <script type="text/javascript" src="src/js/slick.min.js"></script>
+        <script type="text/javascript" src="src/js/stripeNav.js"></script>
+        <script type="text/javascript" src="src/js/star-rating.js"></script>
+        <script type="text/javascript" src="src/js/advisory-article-nav.js"></script>
+        <script type="text/javascript" src="src/js/social-share-kit.js"></script>
+        <script type="text/javascript" src="src/js/floatl.js"></script>
+        <script type="text/javascript" src="src/js/validator.js"></script>
+        <script type="text/javascript" src="src/js/jPages.js"></script>
+        <script type="text/javascript" src="src/js/bootstrap-datetimepicker.js"></script>
+        <script type="text/javascript" src="src/js/main.js"></script>
+    </body>
+</html>

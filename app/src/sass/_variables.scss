@@ -1,0 +1,104 @@
+//Colors
+$lvbackground: #f8f8f8;
+$lvgray: #3C3C3B;
+$lvgray-1: #7d7d7d;
+$lvultralightgray: #dedede;
+$lvlightgray: #868686;
+$lvgraymedium: #4c4c4c;
+$lvlightpink: #D6589F;
+$lvpink-1: #c1267f;
+$lvpink-2: #c00971;
+$lvpink: #C0096F;
+$lvpinkmedium: #bc0071;
+$lvdarkpink: #760043;
+$white: #ffffff;
+$whitemedium: #fcfcfc;
+$lvblack: #000000;
+$lvmediumgreen: #469e53;
+$lvgreen: #4cb05b;
+$lvgreen-1: #177b28;
+$lvlightgreen: #a8e2b2;
+$lvlightgreen-1: #25d366;
+$lvlightgreen-2: #95d03a;
+$lvyellow: #fddb18;
+$lvdarkblue: #3b5998;
+$lvlightblue: #55acee;
+$lverror: #d14b49;
+
+$duration: 200ms;
+$text-color: hsl(0, 0%, 40%);
+
+.pink-border-10px {
+  border: 10px solid $lvlightpink;
+}
+.medium-pink-border-10px {
+  border: 10px solid $lvpink-2;
+}
+.dark-pink-border-10px {
+  border: 10px solid $lvdarkpink;
+}
+.green-border-10px {
+  border: 10px solid $lvgreen;
+}
+.medium-border-10px {
+  border: 10px solid $lvgreen-1;
+}
+
+.light-bg {
+  background-color: $lvbackground;
+}
+.pink-bg {
+  background-color: $lvpink-1;
+}
+.darkPink-bg {
+  background-color: $lvdarkpink;
+}
+.lightPink-bg {
+  background-color: $lvlightpink;
+}
+.green-bg {
+  background-color: $lvgreen;
+}
+.mediumGreen-bg {
+  background-color: $lvgreen-1;
+}
+.darkBlue-bg {
+  background-color: $lvdarkblue;
+}
+.lightBlue-bg {
+  background-color: $lvlightblue;
+}
+.lightgreen1-bg {
+  background-color: $lvlightgreen-1;
+}
+.gray1-bg {
+  background-color: $lvgray-1;
+}
+.lightgreen2-bg {
+  background-color: $lvlightgreen-2;
+}
+
+// Fonts
+$Montserrat: 'Montserrat', 'Arial', sans-serif;
+$Arvo: 'Arvo', 'Arial', sans-serif;
+$Questrial: 'Questrial', 'Arial', sans-serif;
+
+
+//  Vertical Timeline
+
+// colors
+
+$main-text: #7f8c97; // main text
+$link: #acb7c0; // anchor tags
+$background: #e9f0f5; // body background color
+
+$color-1: #303e49; // blue dark
+$color-2: #c03b44; // red
+$color-3: #ffffff; // white
+$color-4: #75ce66; // green
+$color-5: #f0ca45; // yellow
+
+// fonts
+
+$primary-font: 'Droid Serif', serif;
+$secondary-font: 'Open Sans', sans-serif;

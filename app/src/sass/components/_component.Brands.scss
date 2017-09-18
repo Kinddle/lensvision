@@ -1,0 +1,9 @@
+.Brands {
+  &__Thumbnail {
+    @extend %Thumbnail;
+    border: none;
+  }
+  &__Image {
+    width: 100%;
+  }
+}

@@ -1,0 +1,107 @@
+%RatingsDate {
+  color: $lvgray;
+  margin-bottom: 10px;
+}
+.Ratings {
+  background-color: $lvgreen;
+  padding: 20px 0;
+
+  &__Badge {
+    @include from-to(768px, 991px) {
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+    @include to(767px) {
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__Date {
+    @extend %RatingsDate;
+    position: relative;
+    font-size: 12px;
+  }
+
+  &__Text {
+    color: $white;
+    font-size: 14px;
+    font-family: $Montserrat;
+    @include to(480px) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__Review {
+    text-align: center;
+    margin: 20px 0 0 0;
+    color: $lvgray;
+  }
+}
+
+
+/** Stars & Input*/
+
+.rating-container {
+  .rating-stars {
+    position: relative;
+    vertical-align: middle;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .rating-input {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    font-size: 1px;
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.rating-disabled {
+  .rating-input, .rating-stars {
+    cursor: not-allowed;
+  }
+}
+
+.rating-container {
+  .star {
+    display: inline-block;
+    margin: 0 2px;
+    text-align: center;
+  }
+  .empty-stars {
+    color: #ffffff;
+  }
+  .filled-stars {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: auto;
+    color: $lvyellow;
+    white-space: nowrap;
+    overflow: hidden;
+    text-shadow: 1px 1px #999;
+  }
+}
+
+/*** Sizes*/
+.rating-md {
+  font-size: 12px;
+}
+
+/*** Clear*/
+.rating-container {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  @include to(991px) {
+    left: 25%;
+  }
+}

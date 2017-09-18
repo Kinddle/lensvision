@@ -1,0 +1,34 @@
+%TitleText {
+  font-size: 30px;
+  font-family: $Arvo;
+  color: $lvgraymedium;
+  line-height: normal;
+  @include to(1024px) {
+    font-size: 25px;
+  }
+  @include to(767px) {
+    font-size: 18px;
+  }
+}
+
+%SubTitleText {
+  font-family: $Montserrat;
+  font-weight: 300;
+  font-size: 24px;
+  @extend %TitleText;
+  @include to(1024px) {
+    font-size: 19px;
+  }
+  @include to(767px) {
+    font-size: 18px;
+  }
+  @include to(480px) {
+    font-size: 15px;
+  }
+}
+.title {
+  @extend %TitleText;
+}
+.sub-title {
+  @extend %SubTitleText;
+}

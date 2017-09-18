@@ -1,0 +1,52 @@
+%ActionSwitch {
+  width:19px;
+  height:19px;
+  display:block;
+  position:absolute;
+  top:0;
+  left:0;
+  line-height:20px;
+  text-align:center;
+  -webkit-transition: .5s all ease-out;
+  transition: .5s all ease-out;
+  }
+
+
+.Switch {
+  width:19px;
+  height:19px;
+  position:relative;
+  font-size:20px;
+  font-weight:bold;
+  cursor:pointer;
+  color:#fff;
+  position: absolute;
+  right: 0;
+  top: 0;
+  &__MarkerLink {
+    @extend %ActionSwitch;
+  }
+  &__MarkerAfter {
+    @extend %ActionSwitch;
+    opacity: 0;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    .collapsed & {
+      opacity: 1;
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+
+  }
+  &__MarkerBefore {
+    @extend %ActionSwitch;
+    opacity: 1;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    .collapsed & {
+      opacity: 0;
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+  }
+}

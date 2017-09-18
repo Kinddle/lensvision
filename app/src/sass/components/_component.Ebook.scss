@@ -1,0 +1,21 @@
+.Ebook {
+  background-color: $lvbackground;
+  padding: 20px 10px;
+  &__Title {
+    font-size: 20px;
+    font-family: $Arvo;
+    color: $lvgray;
+  }
+
+  &__Text {
+    font-size: 16px;
+    font-family: $Montserrat;
+    font-weight: 300;
+    color: $lvgray;
+  }
+
+  &__Button {
+    @extend %ActionButtons;
+    margin-top: 15px;
+  }
+}

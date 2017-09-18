@@ -1,0 +1,128 @@
+%FormElement {
+  margin-bottom: 1.5em;
+  font-family: $Montserrat;
+  font-weight: 300;
+  position: relative;
+
+  &.required {
+    &.row:before {
+      display: none;
+    }
+
+    &:before {
+      content: "*";
+      position: absolute;
+      font-size: 2em;
+      top: 0;
+      left: 5px;
+      color: $lverror;
+    }
+  }
+
+  .form-control-feedback {
+    top: 5px !important;  // reset old.scss
+  }
+
+  @include to(768px) {
+    &:first-child {
+      margin-bottom: 1.5em;
+    }
+
+    &.row {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.FormElement {
+  @extend %FormElement;
+  z-index: 1;
+
+  @include from(768px) {
+    .FormElement {
+      margin-bottom: 0;
+    }
+  }
+
+  input,
+  textarea {
+    box-sizing: border-box;
+    width: 100%;
+  }
+}
+
+.Floatl {
+  &--focused,
+  &__Label {
+    color: #cb2e8a;
+  }
+  &__Label {
+    transition: all $duration ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    display: inline-block;
+    top: 9px;
+    left: 6px;
+    padding: 5px 3px 3px 10px;
+    font-size: 10px;
+    line-height: 1em;
+    font-weight: bold;
+    color: $text-color;
+    .required {
+      color: $lverror;
+    }
+    .has-error & {
+      color: $lverror;
+    }
+  }
+  &__Input {
+    transition: all $duration ease-in-out;
+    appearance: none;
+    outline: none;
+    margin-top: 0;
+    margin-left: 0;
+    padding: 11px 15px;
+    font-size: 13px;
+
+    &::selection {
+      color: white;
+      background-color: #cb2e8a;
+    }
+
+    &:focus {
+      border-color: #cb2e8a;
+    }
+  }
+  &__Button {
+    border-top-color: $lvgray;
+    border-right-color: $lvgray;
+    border-bottom-color: $lvgray;
+    .required {
+      color: $lverror;
+    }
+    .has-error & {
+      color: $lverror;
+    }
+  }
+
+  &--active {
+    .Floatl__Label {
+      opacity: 1;
+      visibility: visible;
+      top: 1px;
+    }
+    .Floatl__Input {
+      padding: 17px 8px 5px 15px;
+    }
+    &.Floatl--multiline .Floatl__Label {
+      background-color: $white;
+      background: linear-gradient(to bottom, rgba(white, .95) 0%,
+                                             rgba(white, .95) 80%,
+                                             rgba(white, 0) 100%);
+    }
+  }
+}
+input.Floatl__Input {
+  height: 42px;
+}

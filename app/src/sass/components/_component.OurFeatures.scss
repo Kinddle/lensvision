@@ -1,0 +1,90 @@
+%IconWrap {
+  width: 100px;
+  height: 100px;
+  display: block;
+  border: 10px solid $lvlightgreen;
+  position: relative;
+  @include to(480px) {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #a8e2b2;
+  }
+}
+
+.OurFeatures {
+  font-family: $Montserrat;
+  color: $lvgray;
+
+  &__IconWrap {
+    @extend %IconWrap;
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+    .features__icon {
+      display: block;
+      margin: 22% auto;
+      color: $lvlightgreen;
+      @include to(480px) {
+        margin: 15% auto;
+        font-size: 2em;
+      }
+    }
+    .icon-lensvision-lens {
+      margin: 31% auto !important;
+      font-size: 30px;
+      text-align: center;
+      font-family: 'icomoon' !important;
+      @include to(480px) {
+        margin: 26% auto !important;
+        font-size: 20px;
+      }
+
+    }
+  }
+
+  &__Icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    @include to(480px) {
+      height: 50%;
+    }
+  }
+
+  &__MediaBody {
+    padding-left: 37px;
+    @include to(768px) {
+      padding-left: 2%;
+    }
+  }
+
+  &__Heading {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 25px;
+  }
+
+  &__Text {
+    font-size: 16px;
+    font-weight: 300;
+    margin-left: 0 !important;   //reset Old.scss
+  }
+
+  &__BrandsList {
+    display: table;
+    width: 100%;
+  }
+
+  &__BrandsListItem {
+    display: table-cell !important;   //reset src/sass/bootstrap/_type.scss
+  }
+
+  &__BrandsListImage {
+    width: 100%;
+  }
+
+}

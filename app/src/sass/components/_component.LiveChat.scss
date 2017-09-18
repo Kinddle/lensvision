@@ -1,0 +1,86 @@
+.LiveChat {
+  background-color: $lvbackground;
+  padding: 20px 0 40px 0;
+  position: relative;
+  overflow: hidden;
+  &__SubTitle {
+    font-weight: 400;
+    font-size: 20px;
+    @extend .sub-title;
+  }
+  &__Description {
+    @extend .Products__SubTitle;
+    font-size: 16px;
+  }
+  &__Textarea {
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: $lvlightgray;
+    }
+    ::-moz-placeholder { /* Firefox 19+ */
+      color: $lvlightgray;
+    }
+    :-ms-input-placeholder { /* IE 10+ */
+      color: $lvlightgray;
+    }
+    :-moz-placeholder { /* Firefox 18- */
+      color: $lvlightgray;
+    }
+    display: block;
+    width: 100%;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    background-color: $white;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    margin-bottom: 20px;
+    @extend .Products__SubTitle;
+  }
+  &__Button {
+    @extend %ActionButtons;
+  }
+  &__Expert {
+    position: absolute;
+    bottom: 0%;
+    left: 56%;
+    height: 95%;
+    @include from-to(768px, 1023px) {
+      left: 44%;
+    }
+    @include to(767px) {
+      display: none;
+    }
+  }
+  // &__ExpertPhoto {
+  //   height: 100%;
+  // }
+  &__ExpertInfo {
+    background-color: $white;
+    display: inline-block;
+    padding: 15px 40px 15px 15px;
+    font-family: $Montserrat;
+    margin-top: 14%;
+    @include from-to(481px, 767px) {
+      margin-top: 9%;
+    }
+    @include to(767px) {
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+  &__Schedule{
+    display: block;
+    font-size: 12px;
+    font-weight: 300;
+    color: $lvgray;
+    margin-bottom: 5px;
+  }
+  &__ExpertName {
+    font-size: 16px;
+    display: block;
+  }
+  &__ContactNo {
+    color: $lvpink;
+  }
+}

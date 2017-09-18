@@ -1,0 +1,63 @@
+.features {
+  @extend .margin-tb-20;
+  .thumbnail {
+    text-decoration: none;
+    @include border-radius(0);
+    border: none;
+    position: relative;
+    clear: both;
+    padding: 0;
+    margin: 70px 0 0;
+
+    &:hover .features__caption, &:hover:after {
+      background-color: $lvpink;
+      color: $white;
+      @include transition (all 0.3s ease 0s);
+    }
+  }
+  .features__icon {
+    margin: 0 auto;
+    display: block;
+  }
+
+  .features__caption {
+    background-color: $lvlightgreen;
+    color: $lvgraymedium;
+    padding: 0 21px 9px 21px;
+    height: 135px;
+  }
+  .features__img {
+    width: 100%;
+  }
+  .features__title {
+    font-family: $Montserrat;
+    font-weight: 400;
+    @media (min-width: 768px) and (max-width: 1024px){
+      font-size: 16px;
+    }
+  }
+  .features__description {
+    font-size: 12px;
+    font-family: $Montserrat;
+    font-weight: 300;
+    @media (min-width: 768px) and (max-width: 1024px) {
+      font-size: 12px;
+    }
+  }
+  .triangle-up {
+    width: 100%;
+    &:after {
+      content: '';
+      position: absolute;
+      top: -51px;
+      left: 0;
+      right: 0;
+      padding-bottom: 52px;;
+      background: $lvlightgreen;
+      -webkit-clip-path: polygon(50% 3%, 0 100%, 100% 100%);
+      -o-clip-path: polygon(50% 3%, 0 100%, 100% 100%);
+      -ms-clip-path: polygon(50% 3%, 0 100%, 100% 100%);
+      clip-path: polygon(50% 3%, 0 100%, 100% 100%);
+    }
+  }
+}

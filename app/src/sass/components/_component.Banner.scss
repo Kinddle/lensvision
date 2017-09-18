@@ -1,0 +1,75 @@
+%Banner {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  margin: 60px 0 40px 0;
+  @include to(767px) {
+    margin: 20px 0;
+  }
+}
+
+.Banner {
+  @extend %Banner;
+  background-image: url('../../img/banner.jpg');
+}
+
+.FrontBannerSection {
+  &__Image {
+    width: 100%;
+  }
+  &__Wrap {
+    position: relative;
+    padding-bottom: 38%;
+    @include to(480px) {
+      padding-bottom: 45%;
+    }
+  }
+  &__Banner {
+    @extend %Banner;
+    margin: 0;
+    background-position: center top;
+    &--default {
+      background-image: url('../../img/banner-1.jpg');
+    };
+  }
+  &__Caption {
+    @extend %SlideCaption;
+    color: $white;
+  }
+
+  &__Title {
+    @extend %SlideTitle;
+    color: $white;
+    max-width: 45%;
+  }
+
+  &__List {
+    @extend %SlideInfoList;
+  }
+
+  &__Button {
+    @extend %SlideButton;
+    background-color: transparent;
+    border: 1px solid $white;
+    @include from-to(768px, 999px) {
+      font-size: 20px;
+      margin: 15px 0;
+    }
+    @include from-to(481px, 767px) {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+    @include to(559px) {
+      font-size: 12px;
+      margin: 5px 0;
+    }
+  }
+}
+
+.BuyingInstruction {
+  list-style-type: decimal;
+  li {
+    padding-left: 15px;
+    margin-left: 15px;
+  }
+}

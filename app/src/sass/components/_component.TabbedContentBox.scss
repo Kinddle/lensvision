@@ -1,0 +1,132 @@
+.TabbedContentBox {
+  background-image: url('../../img/advisory-articles-bg.jpg');
+  background-size: cover;
+  min-height: 300px;
+  padding-left: 30%;
+  @include box-shadow(0 0 3px rgba(0,0,0,.5));
+  @include clearfix;
+  position: relative !important;
+
+  @include to(767px) {
+    padding-left: 0;
+  }
+
+  &__NavTabsContent {
+    background-color: transparent;
+    padding: 25px 0 35px;
+    min-height: 300px;
+    position: relative;
+
+    .slick-arrow {
+      font-size: 4rem;
+    }
+
+    .arrow-prev {
+      display: none !important;
+    }
+
+    .arrow-prev {
+      left: -20px;
+    }
+  }
+
+  &__NavTabsList {
+    background-color: $lvbackground;
+    width: 30%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding: 15px 0;
+
+    @include to(767px) {
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+    @include from(768px) {
+      display: block;
+      margin: 0;
+      border-radius: 0;
+      border-width: 0;
+      z-index: 1;
+    }
+  }
+
+  &__NavTabsItem {
+    font-size: 16px;
+    font-family: $Montserrat;
+    font-weight: 300;
+    width: 100%;
+    a {
+      color: $lvgraymedium;
+      border-width: 0 !important;
+      border-radius: 0 !important;
+      line-height: 1.1 !important;
+
+      @include to(767px) {
+        margin-right: 0 !important;
+      }
+    }
+
+    &:hover a,
+    &:focus a,
+    &:active a,
+    &.active a {
+      color: $lvpink !important;   //reset Ols.scss
+      border-width: 0 !important;
+      border: none;
+    }
+  }
+
+  &__ContentItem {
+    a {
+      color: white;
+      line-height: 1.8em;
+
+      @include to(768px) {
+        line-height: 2em;
+      }
+    }
+
+    &:hover a,
+    &:focus a,
+    &:active a,
+    &.active a {
+      color: $whitemedium;
+    }
+  }
+
+  &__NavTabsPane {
+    background-color: transparent !important;
+    padding-left: 20px;
+    outline: none;
+    display: none;
+
+    &.active {
+      display: block;
+    }
+
+    @include to(768px) {
+      padding: 40px 20px 20px 20px;
+    }
+  }
+
+  &__Dropdown {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    background-color: white;
+    height: 3em;
+    color: black;
+
+
+    @include from(768px) {
+      display: none;
+    }
+  }
+}

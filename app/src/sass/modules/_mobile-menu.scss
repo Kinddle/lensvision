@@ -1,0 +1,227 @@
+.navbar-fix-top {
+  top: 0;
+  -webkit-sticky: sticky;
+  position: -webkit-sticky;
+  position: sticky;
+  transform: translateZ(3px);
+  -webkit-transform: translateZ(3px);
+  z-index: 102;
+  border-bottom: 1px solid #eee;
+}
+
+.navbar-fix-bottom {
+  bottom: 0;
+  transform: translateZ(3px);
+  -webkit-transform: translateZ(3px);
+  z-index: 102;
+  border-top: 1px solid #eee;
+  position: fixed;
+}
+
+.toolbar__open-left{
+  /* menu icon - visible on small screens only */
+  position: relative;
+  top: 0;
+  right: 0;
+  height: 60px;
+  width: 60px;
+  /* replace text with icon */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  color: transparent;
+  cursor: pointer;
+
+  span, span::after, span::before {
+    position: absolute;
+    background-color: $color-1;
+    height: 3px;
+    width: 26px;
+  }
+
+  span {
+    @include center;
+    transition: background-color .3s;
+  }
+
+  span::after, span::before {
+    content: '';
+    left: 0;
+    transition: transform .3s;
+  }
+
+  span::before {
+    transform: translateY(-9px);
+  }
+
+  span::after {
+    transform: translateY(9px);
+  }
+}
+
+.snapjs-left .toolbar__open-left span {
+  background-color: transparent;
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.snapjs-left {
+  .toolbar__list {
+    display: none;
+  }
+  .snap-content {
+    filter: grayscale(100%);
+    filter: brightness(90%);
+  }
+}
+
+.fa-arrow-left {
+  display: none;
+}
+.toolbar__bar {
+  width: 100%;
+  padding: 25px 0;
+  color: $lvgray;
+  @include transition(all 1s ease 0s);
+}
+.toolbar__open-left {
+  @include inline-block;
+}
+.toolbar__list {
+  margin-bottom: 0;
+  margin-right: 10px;
+  .toolbar__item {
+    margin: 21px 0;
+    .toolbar__links {
+      @extend %TopNavLinks;
+      position: relative;
+      &.cart .badge {
+        @extend %CartBadge;
+        right: 12px;
+      }
+    }
+    .toolbar__search {
+      right: 0;
+      @include box-shadow(none);
+      border: none;
+      width: 100%;
+    }
+  }
+}
+.toolbar__btn-wrap {
+  position: static;
+  .toolbar__btn {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: transparent !important;
+      color: $lvpink;
+      outline: none;
+      @include box-shadow(none);
+    }
+  }
+}
+.open {
+  .toolbar__btn {
+    background-color: transparent;
+  }
+}
+.snap-drawer__search-box {
+  position: relative;
+  margin: 0 10px;
+  width: initial;
+  .snap-drawer__search-box-icon {
+    position: absolute;;
+    right: 5px;
+    top: 10px;
+    color: $lvlightgray;
+  }
+}
+.top-nav-mobile {
+  font: 100% $Montserrat;
+  .top-nav-mobile__links {
+    color: $lvgreen;
+    background-color: $white;
+    display: block;
+    @include border-radius(0);
+    margin-bottom: 10px;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $lvgreen;
+      background-color: $lvbackground;
+      box-shadow: none !important;  //reset Old.css box-shadow
+    }
+  }
+}
+.top-nav-mobile__links_white {
+  position: relative;
+  color: $white;
+  display: block;
+  &:hover, &:focus, &:active {
+    color: $white;
+    text-decoration: none;
+
+  }
+}
+.customer-service-policy-mobile {
+  background-color: $lvbackground;
+  width: 266px;
+  position: relative;
+  margin-left: -133px;
+  height: 100%;
+  left: 50%;
+  color: $lvgray;
+  .customer-service-policy-mobile__item {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+}
+
+.languages {
+  .active {
+    .languages__item {
+      color: $lvpink;
+    }
+  }
+  .languages__item {
+    font-size: 12px;
+    color: $white;
+    border: none;
+    padding: 0;
+    &:hover, &:focus, &:active {
+      color: $lvpink;
+    }
+  }
+}
+//accordion mobile menu
+.panel {
+  &-heading {
+    background-color: transparent;
+    border: none;
+    padding: 10px 15px;
+    color: $white;
+    position: relative;
+  }
+  
+  &-body {
+    border: none !important;   //reset src/stylesheets/bootrstrap/_panels.scss
+    padding: 0 15px;
+
+    &--white {
+      background-color: $white;
+      & .DropdownForm {
+        min-width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,92 @@
+%ProductsImage {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display:block;
+  -ms-interpolation-mode: bicubic;
+  image-rendering: optimizeQuality;
+  // image-rendering: optimizeSpeed;
+  // image-rendering: -moz-crisp-edges;
+  // image-rendering: -o-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  // image-rendering: optimize-contrast;
+  // -ms-interpolation-mode: nearest-neighbor;
+}
+%ProductsPrice {
+  text-transform: uppercase;
+  text-align: right;
+  font-weight: 400;
+  padding: 5px 10px;
+  margin-bottom: 0;
+  position: absolute;
+  right: 5px;
+  left: 5px;
+  bottom: 5px;
+  @include transition (all 0.2s ease-in-out);
+}
+.Products {
+  @extend .margin-tb-20;
+  padding-bottom: 20px;
+  &__Thumbnail {
+    @extend %Thumbnail;
+    background-color: $white;
+    position: relative;
+    min-height: 340px;
+    @include from-to(992px, 1199px){
+        min-height: 335px;
+    };
+    @include to(480px){
+        min-height: 300px;
+    };
+    &--glasses {
+      display: block;
+      margin-bottom: 40px;
+      .Products__SubTitle {
+        color: $lvgray;
+        min-height: 40px;
+        &:hover,
+        &:focus {
+          color: $lvdarkpink;
+        }
+      }
+      .Button--lightPink {
+        width: 100%;
+      }
+    }
+  }
+  &__Title {
+    font-weight: 400;
+  }
+  &__SubTitle {
+    font-weight: 300;
+  }
+  &__ImageWrap {
+    margin-bottom: 20px;
+    .Products__Image {
+      max-height: 160px;
+      min-height: 160px;
+    }
+  }
+  &__Image {
+    @extend %ProductsImage;
+  }
+  &__Price {
+    @extend %ProductsPrice;
+  }
+  &__OldPrice {
+      font-size: 12px;
+      text-align: right;
+      padding: 0 10px;
+      position: absolute;
+      right: 5px;
+      left: 5px;
+      bottom: 40px;
+  }
+
+  .Button--primary {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}

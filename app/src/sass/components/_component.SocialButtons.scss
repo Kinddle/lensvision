@@ -1,0 +1,71 @@
+.SocialButtons {
+  //display: table;
+  text-align: justify;
+  width: 100%;
+  &:after {
+    content: '';
+	  display: inline-block;
+	  width: 100%;
+  }
+  &--fixed {
+    position: -webkit-sticky;
+    position: sticky;
+  }
+  &__Item {
+    color: $white;
+    font-size: 12px;
+    display: inline-block;
+    width: 19%;
+    margin-bottom: 10px;
+    &:last-child {
+      margin-right: 0;
+    }
+    &:hover,
+    &:focus {
+      background-color: $white;
+    }
+  }
+  &__Icon {
+    margin: 0 5px 0 0;
+  }
+  &--facebook {
+    border: 1px solid $lvdarkblue;
+    &:hover,
+    &:focus {
+      color: $lvdarkblue;
+      border: 1px solid $lvdarkblue;
+    }
+  }
+  &--twitter {
+    border: 1px solid $lvlightblue;
+    &:hover,
+    &:focus {
+      color: $lvlightblue;
+      border: 1px solid $lvlightblue;
+    }
+  }
+  &--whatsapp {
+    border: 1px solid $lvlightgreen-1;
+    &:hover,
+    &:focus {
+      color: $lvlightgreen-1;
+      border: 1px solid $lvlightgreen-1 ;
+    }
+  }
+  &--email {
+    border: 1px solid $lvgray-1;
+    &:hover,
+    &:focus {
+      color: $lvgray-1;
+      border: 1px solid $lvgray-1;
+    }
+  }
+  &--share {
+    border: 1px solid $lvlightgreen-2;
+    &:hover,
+    &:focus {
+      color: $lvlightgreen-2;
+      border: 1px solid $lvlightgreen-2;
+    }
+  }
+}

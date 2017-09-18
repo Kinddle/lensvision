@@ -1,0 +1,90 @@
+.customer-service-policy {
+  height: 37px;
+  font: 100% $Montserrat;
+  font-weight: 300;
+  background-color: $lvbackground;
+  cursor: pointer;
+  .customer-service-policy__row {
+    display: table;
+    width: 100%;
+
+  }
+  &__phone {
+    @include transition(all 0.3s ease 0s);
+    &:hover,
+    &:focus {
+      color: $lvdarkpink;
+    }
+  }
+}
+.customer-service-policy__list {
+  font-size: 12px;
+  color: $lvgray;
+  line-height: 37px;
+  display:table-cell;
+  border-right: 38px solid transparent;
+  border-left: 38px solid transparent;
+  &:last-child {
+    border-right: 0;
+  }
+  &:first-child {
+    border-left: 0;
+  }
+  @include from-to(993px, 1199px) {
+    border-right: 15px solid transparent;
+    border-left: 15px solid transparent;
+  }
+  @include from-to(768px, 992px) {
+    border-right: 47px solid transparent;
+    border-left: 47px solid transparent;
+  }
+
+  @include from-to(768px, 992px) {
+    text-align: center;
+  }
+  span {
+    @media (min-width: 768px) and (max-width: 992px) {
+       display: none;
+    }
+  }
+}
+.tip {
+	cursor: pointer;
+}
+.tooltip {
+  &.bottom {
+      position: absolute;
+  }
+  &.in {
+    @include opacity(1);
+    filter:alpha(opacity=100);
+  }
+  .tooltip-inner {
+    background-color: $white;
+    color: $lvgray;
+    border: 1px solid $lvultralightgray;
+    @include border-radius(5px);
+    @include box-shadow(0 6px 6px $lvultralightgray);
+    background-clip: padding-box;
+    text-align: left;
+    padding: 10px 20px;
+    min-width: 100px;
+    max-width: 100%;
+    //min-width: 600px;
+    //max-width: 600px;
+  }
+}
+.tooltip.bottom {
+  .tooltip-arrow {
+    top: 0;
+    left: 50%;
+    margin-left: -40%;
+    border-bottom-color: $lvgray;
+    border-width: 0 6px 6px;
+    &:after {
+    }
+  }
+}
+.customer-service-policy__list_end {
+  color: $lvpink;
+}

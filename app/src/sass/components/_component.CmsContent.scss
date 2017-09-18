@@ -1,0 +1,91 @@
+.CmsContent {
+  ol, ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  h1 {
+    font-family: "Arvo","Arial",serif;
+    font-weight: 700;
+    font-style: italic;
+    line-height: normal;
+    font-size: 37px;
+    color: #3C3C3B;
+  }
+
+  h2 {
+    font-size: 30px;
+    font-family: "Arvo","Arial",serif;
+    line-height: normal;
+    color: #3C3C3B;
+  }
+
+  h3 {
+    font-family: "Montserrat","Arial",sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: normal;
+    color: #3C3C3B;
+  }
+
+  h4 {
+    font-size: 18px;
+    font-weight: 700;
+    font-family: "Arvo","Arial",serif;
+    color: #3C3C3B;
+  }
+
+  h5 {
+    font-family: "Montserrat","Arial",sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: normal;
+    color: #3C3C3B;
+  }
+
+  h6 {
+    font-size: 16px;
+    line-height: 1.1;
+    font-family: "Montserrat","Arial",sans-serif;
+    font-weight: 400;
+    color: #3C3C3B;
+  }
+
+  ins, u {
+    text-decoration: underline;
+  }
+
+  small {
+    font-size: 80%;
+    font-weight: 400;
+  }
+
+  strong {
+    font-weight: bolder;
+  }
+
+  cite, em, i {
+    font-style: italic;
+  }
+
+  a {
+    text-decoration: none;
+    color: #ffffff;
+    cursor: pointer;
+    &:hover,
+    &:focus {
+      color: #C0096F;
+      text-decoration: none;
+    }
+  }
+
+  p {
+    font-family: "Montserrat","Arial",sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+  }
+
+  img {
+    border: 0;
+  }
+}

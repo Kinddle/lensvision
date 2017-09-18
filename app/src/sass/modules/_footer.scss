@@ -1,0 +1,204 @@
+.Footer {
+  background-color: $lvgray;
+  font-family: $Montserrat;
+  padding: 20px 0 30px 0;
+
+  @media (max-width: 767px) {
+    padding-bottom: 67px;
+  }
+  @media (max-width: 480px) {
+    padding-bottom: 48px;
+  }
+
+  &__Navigation {
+    color: $white;
+
+    &--Title {
+      margin-bottom: 25px;
+      font-weight: 400;
+    }
+
+    &--Item {
+      padding: 10px 0;
+    }
+
+    &--Link {
+      margin: 0;
+      line-height: 18px;
+      text-decoration: none;
+      font-weight: 300;
+      @include transition(all 0.3s ease 0s);
+      @extend .Footer__Navigation;
+      &:hover,
+      &:focus,
+      &:active {
+        color: $lvpink;
+      }
+    }
+
+    &--SearchInput {
+      font-family: $Montserrat !important;  //reset src/sass/helpers/form-reset.scss
+      font-weight: 300;
+      height: 33px;
+      text-indent: 15px;
+      background-color: $white !important; //reset src/sass/helpers/form-reset.scss
+      border: 1px solid white !important;  //reset src/sass/helpers/form-reset.scss
+      border-top-left-radius: 5px !important;  //reset src/sass/helpers/form-reset.scss
+      border-bottom-left-radius: 5px !important;  //reset src/sass/helpers/form-reset.scss
+      &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: $lvlightgray;
+      }
+      &::-moz-placeholder { /* Firefox 19+ */
+        color: $lvlightgray;
+      }
+      &:-ms-input-placeholder { /* IE 10+ */
+        color: $lvlightgray;
+      }
+      &:-moz-placeholder { /* Firefox 18- */
+        color: $lvlightgray;
+      }
+
+      @media (max-width: 480px) {
+        text-align: left;
+      }
+    }
+
+    &--SearchButton {
+      height: 33px;
+      background-color: $lvpink;
+      border: 1px solid $lvpink;
+      text-transform: uppercase;
+      color: $white;
+      @include border-right-radius(5px);
+      @include transition(all 0.3s ease 0s);
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: $lvdarkpink;
+        border: 1px solid $lvdarkpink;
+        color: $white;
+      }
+    }
+
+    &--ContactInfo {
+      position: relative;
+
+      h6 {
+        font-weight: 400;
+      }
+      span {
+        font-weight: 300;
+        display: block;
+      }
+    }
+
+    &--StaffWrap {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+
+      span {
+        width: 100%;
+        text-align: right;
+      }
+
+      &--Photo {
+        margin-bottom: 10px;
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  &__SearchBlock {
+    background-color: $white;
+    padding: 15px;
+    margin-top: 25px;
+    @include border-radius(5px);
+
+    &--Text {
+      line-height: 33px;
+      @media (max-width: 480px) {
+        font-size: 13px;
+      }
+    }
+
+    &--Input {
+      height: 33px;
+      color: $lvgray;
+      font-family: $Montserrat !important;  //reset src/sass/helpers/form-reset.scss
+      font-weight: 300;
+      text-indent: 15px;
+      background-color: $white !important; //reset src/sass/helpers/form-reset.scss
+      border: 1px solid $lvgray !important;  //reset src/sass/helpers/form-reset.scss
+      border-top-left-radius: 5px !important;  //reset src/sass/helpers/form-reset.scss
+      border-bottom-left-radius: 5px !important;  //reset src/sass/helpers/form-reset.scss
+      &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: $lvlightgray;
+      }
+      &::-moz-placeholder { /* Firefox 19+ */
+        color: $lvlightgray;
+      }
+      &:-ms-input-placeholder { /* IE 10+ */
+        color: $lvlightgray;
+      }
+      &:-moz-placeholder { /* Firefox 18- */
+        color: $lvlightgray;
+      }
+    }
+
+    &--Button {
+      height: 33px;
+      background-color: $lvpink;
+      border: 1px solid $lvpink;
+      text-transform: uppercase;
+      color: $white;
+      @include border-right-radius(5px);
+      @include transition(all 0.3s ease 0s);
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: $lvdarkpink;
+        border: 1px solid $lvdarkpink;
+        color: $white;
+      }
+    }
+  }
+
+  &__PaymentMethodsAndCertificates {
+    margin: 20px 0;
+
+    &--Title {
+      color: $white;
+      font-weight: 400;
+      margin-bottom: 20px;
+    }
+
+    &--Item {
+      padding-left: 10px;
+      padding-right: 10px;
+      margin: 0 0 10px 0;
+      vertical-align: middle;
+      height: 60px;
+      line-height: 60px;
+      @include to(480px) {
+        padding-left: 0;
+        padding-right: 2%;
+        max-height: 30px;
+        line-height: 30px;
+      }
+      &:first-child {
+        @extend .reset-pl;
+      }
+      img {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+#copyright {
+  color: $white;
+  margin-bottom: 20px;
+}

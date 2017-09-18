@@ -1,0 +1,88 @@
+.Form {
+  .alert {
+    display: none;
+  }
+
+  &__FormGroup {
+    margin-bottom: 30px;
+  }
+
+  &__Title {
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  &__SubTitle {
+    font-size: 18px;
+    font-weight: 700;
+    font-family: $Arvo;
+  }
+
+  &__Info {
+    color: $lvlightgray;
+    font-size: 16px;
+    font-family: $Montserrat;
+    font-weight: 300;
+  }
+
+  &__FormField {
+    margin-bottom: 30px;
+  }
+
+  &__FormInput {
+    &[type] {
+      height: 44px;
+      border: 1px solid $lvgray;
+      border-radius: 5px;
+      padding-left: 15px;
+      &::-webkit-input-placeholder {color:$lvlightgray;}
+      &::-moz-placeholder          {color:$lvlightgray;}/* Firefox 19+ */
+      &:-moz-placeholder           {color:$lvlightgray;}/* Firefox 18- */
+      &:-ms-input-placeholder      {color:$lvlightgray;}
+    }
+
+    .has-error & {
+      border-color: $lverror;
+      border-width: 2px;
+      color: $lverror;
+      &::-webkit-input-placeholder {color:$lverror;}
+      &::-moz-placeholder          {color:$lverror;}/* Firefox 19+ */
+      &:-moz-placeholder           {color:$lverror;}/* Firefox 18- */
+      &:-ms-input-placeholder      {color:$lverror;}
+    }
+  }
+
+  &__FormSelectWrapper {
+    position: relative;
+    &:after {
+      content: " ";
+      top: 50%;
+      margin-top: -2px;
+      right: 10px;
+      position: absolute;
+      width: 0; 
+      height: 0; 
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 5px solid black;
+      display: none \9; // hide arrow in IE9
+    }
+  }
+
+  &__FormSelect {
+    height: 44px;
+    border: 1px solid $lvgray;
+    border-radius: 5px;
+    width: 100%;
+  }
+
+  &__FormSubmit[type] {
+    @extend %ActionButtons !optional;
+    padding: 10px 12px;
+    border-radius: 3px;
+    i {
+      margin-right: 5px;
+    }
+  }
+}

@@ -1,0 +1,134 @@
+%SlideCaption {
+  color: $lvgray;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  @include transform(translateY(-50%));
+}
+%SlideTitle {
+  font-family: $Arvo;
+  font-weight: 700;
+  font-style: italic;
+  line-height: normal;
+  font-size: 37px;
+  @include from-to(1000px, 1200px) {
+    font-size: 32px;
+  }
+  @include from-to(768px, 999px) {
+    font-size: 26px;
+  }
+  @include from-to(560px, 767px) {
+    font-size: 21px;
+  }
+  @include from-to(320px, 559px) {
+    font-size: 18px;
+  }
+}
+
+%SlideInfoList {
+  font-size: 31px;
+  font-family: 'Questrial', sans-serif;
+  @include from-to(1000px, 1200px) {
+    font-size: 26px;
+  }
+  @include from-to(768px, 999px) {
+    font-size: 20px;
+  }
+  @include from-to(481px, 767px) {
+    font-size:  15px;
+  }
+  @include from-to(320px, 559px) {
+    font-size: 12px;
+  }
+}
+
+%SlideButton {
+  margin: 20px 0;
+  @extend %ActionButtons;
+  @include border-radius(10px);
+  &:hover,
+  &:focus {
+    background-color: $white;
+    color: $lvgray;
+  }
+}
+
+
+.main-slider {
+  height: 100%;
+  width: 100%;
+  @include legacy-pie-clearfix;
+
+  .slide__image {
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+    padding-bottom: 27%;
+    cursor: pointer;
+    &__link {
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+    }
+    @media (min-width: 768px) and (max-width: 992px) {
+      padding-bottom: 40%;
+    }
+    @media (max-width: 767px) {
+      padding-bottom: 50%;
+    }
+    @media (max-width: 480px) {
+      padding-bottom: 50%;
+    }
+  }
+}
+.arrow-prev,
+.arrow-next {
+  position: absolute;
+  top: 50%;
+  margin-top: -1rem;
+  color: $white;
+  font-size: 2rem;
+}
+.arrow-prev {
+    left: 0;
+    z-index: 100;
+}
+.arrow-next {
+    right: 0;
+    z-index: 100;
+}
+.slick-dots {
+  bottom: 20px;
+  @media (min-width: 768px) and (max-width: 992px) {
+    bottom: 15px;
+  }
+  @media (max-width: 767px) {
+    bottom: 10px;
+  }
+  @media (max-width: 480px) {
+    bottom: 5px;
+  }
+  li {
+    margin: 0;
+    button {
+      &:before {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.slick-slider {
+  .slide__caption {
+    @extend %SlideCaption;
+    .slider__slide-title {
+      @extend %SlideTitle;
+    }
+    .slider__slide-info-list {
+       @extend %SlideInfoList;
+    }
+  }
+}

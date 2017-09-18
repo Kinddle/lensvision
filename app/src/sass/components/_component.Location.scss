@@ -1,0 +1,32 @@
+.Location {
+  @extend .margin-tb-20;
+
+  &__Button {
+   @extend %ActionButtons;
+  }
+
+  &__Title {
+    @include from-to(481px, 640px) {
+      font-size: 14px;
+    }
+  }
+
+  &__Address {
+    margin-top: 20px;
+    @include from-to(481px, 640px) {
+      font-size: 12px;
+    }
+  }
+
+  &__AddressItem {
+    display: block;
+  }
+
+  &__Map {
+    background-image: url('../../img/map.jpg');
+    width: 100%;
+    background-size: cover;
+    min-height: 420px;
+    background-position: center;
+  }
+}

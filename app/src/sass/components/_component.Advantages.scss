@@ -1,0 +1,198 @@
+%AdvantagesTitle {
+  line-height: normal;
+  font-family: $Montserrat;
+  margin-bottom: 20px;
+  text-align: center;
+  color: $white;
+  @include from(993px) {
+    font-size: 1.9vw;
+  }
+  @include from-to(768px, 992px) {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  @include to(480px) {
+    font-size: 5vw;
+    margin: 10px 0;
+  }
+  & small {
+    display: block;
+    color: $white;
+    @include from(993px) {
+      font-size: 1.1vw;
+    }
+    @include from-to(768px, 992px) {
+      font-size: 16px;
+    }
+    @include to(480px) {
+      font-size: 4vw;
+    }
+  }
+}
+%AdvantagesWrap {
+  width: 80%;
+  position: absolute;
+  left: 50%;
+  top: 20px;
+  @include transform(translate(-50%, 0));
+  @include from-to(768px, 992px) {
+    top: 10px;;
+  }
+  @include from-to(481px, 767px) {
+    top: 50%;
+    @include transform(translate(-50%, -50%));
+  }
+  @include to(480px) {
+    top: 50%;
+    @include transform(translate(-50%, -50%));
+  }
+}
+
+%AdvantagesSubTitle {
+  font-family: $Arvo;
+  text-align: center;
+  color: $white;
+  font-size: 16px;
+  @include from-to(768px, 992px) {
+    font-size: 14px;
+  }
+  @include to(480px) {
+    font-size: 14px;
+    margin-top: 0;
+  }
+}
+
+%AdvantagesItem {
+  //overflow: hidden;
+  @include aspect-ratio($ratio: 1);
+  position: relative;
+}
+
+%AdvantagesButton {
+  background-color: transparent;
+  color: $white;
+  border: 1px solid $white;
+  @extend %ActionButtons;
+  margin: 0 auto;
+  display: block;
+  &:hover,
+  &:focus {
+    color: $white;
+    background-color: transparent;
+  }
+}
+
+.Advantages {
+  @extend .margin-tb-20;
+
+  & .title {
+    margin-bottom: 30px;
+  }
+
+  &__Wrap {
+    @extend %AdvantagesWrap;
+  }
+  &__Wrap--text {
+    width: 98%;
+    position: absolute;
+    left: 50%;
+    bottom: 1%;
+    @include transform(translate(-50%, 0));
+    padding: 20px;
+    color: $lvgray;
+    background-color: $white;
+    height: 50%;
+    font-size: 16px;
+    @include from-to(992px, 1199px) {
+      font-size: 14px;
+    }
+    @include from-to(768px, 991px) {
+      font-size: 10px;
+    }
+    @include to(767px) {
+      font-size: 16px;
+    }
+    @include to(560px) {
+      font-size: 13px;
+    }
+    @include to(480px) {
+      font-size: 10px;
+    }
+  }
+
+  &__Item {
+    @extend %AdvantagesItem;
+    display: block;
+    border: 5px solid #ffffff;
+    &--image {
+      @extend %AdvantagesItem;
+      border: 5px solid #ffffff;
+
+      background-size: cover;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: #333333;
+    }
+  }
+
+  &__Title {
+    @extend %AdvantagesTitle;
+    &--small {
+      @extend %AdvantagesTitle;
+      font-size: 1.2vw;
+      @include to(767px) {
+        font-size: 3vw;
+      }
+    }
+  }
+
+  &__SubTitle {
+    @extend %AdvantagesSubTitle;
+  }
+
+  &__Text {
+    font-weight: 300;
+    font-family: $Montserrat;
+    text-align: left;
+    line-height: 20px;
+    margin-bottom: 25px;
+    font-size: 16px;
+    color: $white;
+    @include from-to(768px, 992px) {
+      font-size: 14px;
+      line-height: normal;
+      margin-bottom: 10px;
+    }
+    @include to(480px) {
+      font-size: 3.5vw;
+      line-height: normal;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__Button {
+    @extend %AdvantagesButton;
+    &--white {
+      @extend %AdvantagesButton;
+      border: 1px solid $lvgray;
+      color: $lvgray;
+      &:hover,
+      &:focus {
+        color: $lvpink;
+        border: 1px solid $lvpink;
+      }
+    }
+  }
+
+  &__WrapMagazin {
+    @extend %AdvantagesWrap;
+    width: 82%;
+    @include to(768px) {
+      top: 30px;
+      @include transform(translate(-50%, 0));
+    }
+  }
+
+}

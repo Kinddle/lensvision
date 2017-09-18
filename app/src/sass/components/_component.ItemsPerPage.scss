@@ -1,0 +1,93 @@
+.ItemsPerPage {
+  &__Holder {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 8px 20px;
+    text-align: center;
+    background-color: $lvpink;
+
+    .jp-previous,
+    .jp-next {
+      font-size: 0;
+
+      &:after,
+      &:before {
+        cursor: pointer;
+        color: transparent;
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: 14px;
+        text-rendering: auto;
+        line-height: 2em;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      &:hover {
+        text-decoration: none;
+        &:after,
+        &:before {
+          @include transition(color .3s ease);
+          color: $lvblack;
+        }
+      }
+    }
+
+    .jp-previous {
+      text-align: left;
+      float: left;
+      &:before {
+        color: white;
+        content: "\f053";
+      }
+    }
+
+    .jp-next {
+      text-align: right;
+      float: right;
+
+      &:after {
+        color: white;
+        content: "\f054";
+      }
+    }
+
+    a:not(.jp-previous, .jp-next) {
+      border: 0;
+      background: transparent;
+      display: inline-block;
+      height: 2em;
+      width: 20px;
+      outline: none;
+      line-height: 0px;
+      font-size: 0px;
+      color: transparent;
+      padding: 5px;
+      cursor: pointer;
+      position: relative;
+      &:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "•";
+        width: 20px;
+        height: 20px;
+        font-family: "slick";
+        font-size: 26px;
+        line-height: 20px;
+        text-align: center;
+        color: #000;
+        opacity: .25;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      &.jp-current:after {
+        opacity: 1;
+      }
+    }
+  }
+}
+

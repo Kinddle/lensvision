@@ -1,0 +1,436 @@
+// Silent classes
+%ActionsItem {
+  color: $lvgray;
+  background-color: $lvbackground;
+  padding: 10px 15px;
+  text-decoration: none;
+  float: left;
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  border: none;
+  text-align: center;
+  @include transition(all 0.3s ease 0s);
+
+  @include from(1000px) {
+    height: 70px;
+    width: 100px;
+    margin: 0 6px;
+    @include border-radius(5px);
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $lvlightpink;
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+.MainMenu {
+  position: relative;
+  height: 60px;
+  background-color: $lvgreen;
+
+  &__Divider {
+    @include to(999px) {
+      height: 1px;
+      margin: 15px 0 9px;
+      overflow: hidden;
+      background-color: #e5e5e5;
+      width: 100%;
+    }
+  }
+  &::before {
+    /* never visible - used in JS to check mq */
+    content: 'mobile';
+    display: none;
+  }
+
+  &__TabletMenuTrigger {
+    /* menu icon - visible on tablet viewports only */
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 60px;
+    width: 60px;
+    /* replace text with icon */
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    color: transparent;
+
+    @include from(1000px) {
+      display: none;
+    }
+
+    span, span::after, span::before {
+      /* these are the 3 lines of the menu icon */
+      position: absolute;
+      background-color: $lvgray;
+      height: 3px;
+      width: 26px;
+    }
+
+    span {
+      @include center;
+      @include transition(background-color .3s);
+      @include transform(translateX(-50%) translateY(-50%));
+    }
+
+    span::after, span::before {
+      content: '';
+      left: 0;
+      @include transition(transform .3s);
+    }
+
+    span::before {
+      @include transform (translateY(-9px));
+
+    }
+
+    span::after {
+      @include transform (translateY(9px));
+    }
+  }
+
+  // States of __TabletMenuTrigger
+  &.nav-open .nav-trigger span {
+    background-color: transparent;
+
+    &::before {
+      @include transform (rotate(45deg));
+    }
+
+    &::after {
+      @include transform (rotate(-45deg));
+    }
+  }
+
+  &__DropdownContainer {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 1.2em 5%;
+    background-color: $white;
+    z-index: 1;
+    @include from-to(768px, 1000px) {
+      padding: 1.2em 15px;
+    }
+  }
+
+  &.nav-open .MainMenu__DropdownContainer {
+    display: block;
+    z-index: 3;
+    box-shadow: 0 0 3px rgba(0,0,0,0.5);
+  }
+
+  &__Inner {
+    display: none;
+  }
+
+  @include from(1000px) {
+    height: 70px;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    background-color: $lvgreen;
+    font: 100% $Montserrat;
+    font-size: 19px;
+
+    &::before {
+      content: 'desktop';
+    }
+
+    &__DropdownContainer {
+      /* dropdown wrapper - used to create the slide up/slide down effect when dropdown is revealed/hidden */
+      display: block;
+      top: 58px;
+      z-index: 2;
+      /* overwrite mobile style */
+      width: auto;
+      padding: 0;
+      box-shadow: none;
+      background-color: transparent;
+      /* Force Hardware acceleration */
+      @include transform (translateZ(0));
+
+      will-change: transform;
+      @include transform (translateY(20px));
+      @include transition(transform .3s);
+    }
+
+    // States of __DropdownContainer
+    &.is-dropdown-visible .MainMenu__DropdownContainer {
+      @include transform (translateY(0));
+
+    }
+
+    &__Inner {
+      display: block;
+      > ul > li {
+        display: inline-block;
+        float: left;
+      }
+    }
+
+    // States of __Inner
+    &.is-dropdown-visible .MainMenu__Inner > ul > li > a {
+      /* main navigation hover effect - on hover, reduce opacity of elements not hovered over */
+      opacity: .6;
+    }
+
+    &.is-dropdown-visible .MainMenu__Inner > ul > li.active > a {
+      opacity: 1;
+    }
+
+    // States of __DropdownContainer
+    &.is-dropdown-visible .MainMenu__DropdownContainer {
+      @include transform (translateY(0));
+    }
+
+    &__DropdownList {
+      position: absolute;
+      top: 0;
+      left: 0;
+      visibility: hidden;
+      @include transform (translateZ(0));
+      will-change: transform, width, height;
+      @include transition(visibility .3s);
+      @include box-shadow(0 10px 20px rgba(#000, .08));
+
+      .no-csstransitions & {
+        display: none;
+      }
+
+      &:before {
+        /* dropdown top triangle */
+        content: '';
+        position: absolute;
+        bottom: 100%;
+        height: 0;
+        width: 0;
+        border: 8px solid transparent;
+        border-bottom-color: $color-3;
+        opacity: 0;
+        @include transition(opacity .3s);
+      }
+
+      > ul {
+        position: relative;
+        z-index: 1;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+      }
+    }
+
+    // States of __DropdownList
+    &.is-dropdown-visible .MainMenu__DropdownList {
+      visibility: visible;
+      @include transition(transform .3s, width .3s, height .3s);
+
+      &::before {
+        opacity: 1;
+      }
+    }
+
+    &__DropdownItem {
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0;
+      visibility: hidden;
+      width: 100%;
+      @include transition(opacity .3s, visibility .3s);
+
+      // States
+      &.active {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      &.move-left .MainMenu__DropdownItemContent {
+        @include transform(translateX(-100px));
+      }
+
+      &.move-right .MainMenu__DropdownItemContent {
+        @include transform(translateX(100px));
+      }
+    }
+
+    &__BgLayer {
+      /* morph dropdown background */
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 1px;
+      width: 1px;
+      background: $color-3;
+      opacity: 0;
+      @include transition(opacity .3s);
+
+      transform-origin: top left;
+      -ms-transform-origin: top left;
+      -webkit-transform-origin: top left;
+      -moz-transform-origin: top left;
+      -o-transform-origin: top left;
+      @include transform(translateZ(0));
+      will-change: transform;
+      backface-visibility: hidden;
+    }
+
+    // States __BgLayer
+    &.is-dropdown-visible .MainMenu__BgLayer {
+      opacity: 1;
+      @include transition(transform .3s, opacity .3s);
+    }
+
+    &.is-dropdown-visible .MainMenu__BgLayer {
+      opacity: 1;
+      @include transition(transform .3s, opacity .3s);
+    }
+  }
+
+  // The sizes of content
+  &__DropdownItemContent {
+    @include from(1000px) {
+      width: 100vw !important;
+    }
+  }
+
+  &__Item {
+    display: inline-block;
+    float: left;
+
+    &:first-child {
+      margin-left: -15px;
+    }
+
+    &Link {
+      color: $white;
+      font-weight: 400;
+      display: block;
+      padding: 0 15px !important; //bootstrap/_navs.scss:15
+      height: 70px;
+      line-height: 70px !important; //bootstrap/_navs.scss:15
+      @include font-smoothing;
+      @include transition(opacity .2s)
+
+      @include from-to(1080px, 1200px) {
+        font-size: 1.4vw;
+      }
+      @include to(1079px) {
+        font-size: 1.6vw;
+      }
+
+      &:hover,
+      &:focus,
+      &:active {
+        // !NOTE we should rewrite it hard due to oldCss
+        // despite we changed variables-bootstrap-theme appropriately
+        background-color: transparent !important;
+        color: $lvpink !important;  //reset Old.scss
+      }
+    }
+  }
+
+  &__Inner {
+    min-height: 70px;
+    position: relative;
+
+    @include from(1000px) {
+      display: block;
+    }
+  }
+
+  &__ActionsList {
+    font-size: 13px;
+    overflow: hidden;
+
+    @include to(767px) {
+      bottom: 0;
+      @include transform(translateZ(3px));
+      z-index: 102;
+      border-top: 1px solid #eee;
+      position: fixed;
+    }
+
+    @include to(999px) {
+    }
+
+    @include from(1000px) {
+      font-size: 13px;
+      position: absolute;
+      right: 0;
+      top: -15px;
+      overflow: hidden;
+    }
+
+    &--tablets {
+      display: none;
+      @include from-to(768px, 999px) {
+        padding: 10px 0;
+        display: block;
+      }
+    }
+  }
+
+  &__ActionsItem {
+    @extend %ActionsItem;
+    text-decoration: none;
+    p {
+      font-size: 13px;
+    }
+    @include to(480px) {
+      p {
+        display: none;
+      }
+    }
+    // Modificator
+    &--order_history {
+      @extend %ActionsItem;
+      background-color: $lvpink;
+      color: $white;
+      p {
+        font-size: 13px;
+      }
+    }
+
+    @include to(767px) {
+      font-size: 13px;
+      text-align: center;
+      float: none;
+      display: table-cell;
+      width: 1%;
+    }
+
+    @include to(480px) {
+      span {
+        display: none;
+      }
+    }
+  }
+
+  &__DropdownItemColumn {
+    @include from(1000px) {
+      padding-bottom: 10px;
+      position: relative;
+      width: 100%;
+      &:before {
+        content: '';
+        position: absolute;
+        border-right: 1px solid $lvultralightgray;
+        height: 100%;
+        right: -15px;
+      }
+    }
+  }
+
+  @include to(480px) {
+    display: block;
+  }
+}

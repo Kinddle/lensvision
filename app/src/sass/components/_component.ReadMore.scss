@@ -1,0 +1,94 @@
+.ReadMore {
+  &__Button {
+    background-color: transparent;
+    color: $lvpink;
+    font-size: 16px;
+    padding: 0;
+    margin: 20px 0;
+
+    &.is-collapsed {
+      display: none;
+    }
+  }
+
+  &__SubTitle {
+    background-color: transparent;
+  }
+
+  &__SubTitle--gradient {
+    &.is-collapsed {
+      /* Mozilla Firefox */
+      background-image: -moz-linear-gradient(top, rgba(60,60,59,1) 0%, rgba(238,238,238,1) 100%);
+
+      /* Opera */
+      background-image: -o-linear-gradient(top, rgba(60,60,59,1) 0%, rgba(238,238,238,1) 100%);
+
+      /* Webkit (Safari/Chrome 10) */
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(60,60,59,1)), color-stop(100, rgba(238,238,238,1)));
+
+      /* Webkit (Chrome 11+) */
+      background-image: -webkit-linear-gradient(top, rgba(60,60,59,1) 0%, rgba(238,238,238,1) 100%);
+
+      /* W3C Markup */
+      //background-image: linear-gradient(to bottom, rgba(60,60,59,1) 0%, rgba(238,238,238,1) 100%);
+      /*i.e */
+      //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3C3C3B', endColorstr='#eee', GradientType=0 );
+      @include background-clip(text);
+
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  &__Content {
+    &.is-collapsed {
+      display: none;
+    }
+  }
+
+  &__Link {
+    color: $lvpink;
+    transition: all 0.3s ease 0s;
+    &:hover,
+    &:focus {
+      color: $lvdarkpink;
+    }
+  }
+
+  &__Autor {
+    margin: 30px 0;
+  }
+
+  &__ImageWrap {
+    display: table-cell;
+    vertical-align: top;
+    padding-right: 30px;
+  }
+
+  &__AutorPhoto {
+    width: 95px;
+    height: 95px;
+    border: 1px solid $lvgray;
+  }
+
+  &__AutorText {
+    margin-left: 0 !important;   //reset Old.scss
+    font-size: 16px;
+    font-family: $Montserrat;
+    font-weight: 300;
+    color: $lvgray;
+  }
+
+  &__LiveChat,
+  &__PersonalAppointment {
+    @extend .LiveChat;
+    &--title {
+      font-size: 20px;
+      @extend %TitleText;
+    }
+    &__Button {
+      @extend %ActionButtons;
+      margin: 20px auto;
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+.About {
+
+  &__GalleryWrap {
+    padding: 20px 0;
+    @include to(767px) {
+      padding-bottom: 0;
+    }
+  }
+  &__Text {
+    @extend %Description;
+  }
+  &__Title {
+    @extend %TitleText;
+    @include to(1024px) {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+  }
+  &__GalleryList {
+    @include to(480px) {
+      margin: 5px 0 0 0;
+    }
+  }
+  &__GalleryItem {
+    margin: 0 auto;
+    padding-bottom: 5px;
+    padding-left: 0;
+    @include to(480px) {
+      display: block !important; //reset src/stylesheets/bootstrap/type.scss
+      padding: 5px 0 !important; //reset src/stylesheets/bootstrap/type.scss
+    }
+  }
+
+  &__GalleryImage {
+    width: 100%;
+  }
+}

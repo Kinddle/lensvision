@@ -1,0 +1,47 @@
+.AdvertizingBlock {
+  //$svg-gradient-shim-threshold: 1 !global;
+  @include background(linear-gradient(90deg, #cbeed1, #78b382, #da71ad ));
+  width: 100%;
+  position: relative;
+  padding: 20px 0;
+  &__Wrap {
+    margin: 20px 0;
+    @include to(768px) {
+      margin: 15px 0;
+    }
+  }
+  &__BgImage {
+    background-image: url('../../img/advertizing-img.jpg');
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 209px;
+    background-size: cover;
+    height: 100%;
+    @include opacity(0.5);
+  }
+  &__TotalCount {
+    display: block;
+    font-size: 30px;
+    @include to(767px) {
+      font-size: 25px;
+    }
+  }
+  &__CountDescription {
+    font-size: 16px;
+    @include to(480px) {
+      font-size: 14px;
+    }
+  }
+  .title {
+    color: $white;
+    font-family: $Arvo;
+  }
+  &__TotalCount, &__CountDescription {
+    font-family: $Montserrat;
+    font-weight: 400;
+    color: $white;
+    text-align: center;
+  }
+}

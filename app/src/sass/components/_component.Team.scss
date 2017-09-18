@@ -1,0 +1,28 @@
+.SpecialistTeam {
+  position: relative;
+  overflow: hidden;
+  padding: 20px 0;
+  @include to(991px) {
+    padding-bottom: 0;
+  }
+
+  &__Text {
+    font-weight: 300;
+		font-size: 16px;
+		line-height: 1.4;
+    font-size: $Montserrat;
+    @include to(480px) {
+      font-size: 15px;
+    }
+  }
+  &__Photo {
+    // width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    @include to(991px) {
+      position: inherit;
+      width: 100%;
+    }
+  }
+}

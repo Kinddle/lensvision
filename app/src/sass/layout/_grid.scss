@@ -1,0 +1,18 @@
+.l-half--desktop {
+  width: 50%;
+  float: left;
+}
+
+.l-full--small-desktop {
+  @include to(767px) {
+    width: 100% !important;
+    float: left;
+  }
+}
+.l-oneFourth--desktop {
+  width: 25%;
+  float: left;
+  @include to(767px) {
+    width: 50%;
+  }
+}

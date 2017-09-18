@@ -1,0 +1,161 @@
+%ActionButtons {
+  background-color: $lvpink;
+  color: $white;
+  font-family: 'Questrial', sans-serif;
+  font-size: 16px;
+  @include transition(all 0.3s ease 0s);
+  &:hover,
+  &:focus,
+  &:active {
+    color: $white;
+    background-color: $lvdarkpink;
+    @include box-shadow(none);
+  }
+}
+
+//Main class .Button
+
+//Modified classes
+// .Button--disabled
+// .Button--default
+// .Button--primary
+// .Button--secondary
+// .Button--ghost
+
+.Button {
+  font-family: 'Questrial', sans-serif;
+  padding: 6px 12px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1.42857;
+  font-weight: normal;
+  vertical-align: middle;
+  display: inline-block;
+  text-decoration: none;
+  @include border-radius(4px);
+  @include transition(all 0.3s ease 0s);
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+
+  &.js--disabled {
+    opacity: .3;
+    cursor: not-allowed;
+  }
+
+  &--primary {
+    background-color: $lvpink;
+    color: $white;
+    font-size: 16px;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $white;
+      background-color: $lvdarkpink;
+      text-decoration: none;
+      @include box-shadow(none);
+    }
+  }
+
+  &--secondary {
+    background-color: #888;
+    color: $white;
+    border: none;
+    font-size: 16px;
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: #A8A8A8;;
+      color: $white;
+      @include box-shadow(none);
+    }
+  }
+
+  &--ghost-primary {
+    background-color: transparent;
+    color: $white;
+    border: 1px solid $white;
+    font-size: 16px;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $white;
+      background-color: $lvpink;
+      border: 1px solid $white;
+      @include box-shadow(none);
+    }
+  }
+
+  &--ghost-secondary {
+    background-color: transparent;
+    color: $white;
+    border: 1px solid $white;
+    font-size: 16px;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $white;
+      background-color: #A8A8A8;;
+      border: 1px solid $white;
+      @include box-shadow(none);
+    }
+  }
+
+  &--default {
+    color: $lvgray;
+    background-color: $lvbackground;
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $lvlightpink;
+      color: $white;
+      text-decoration: none;
+    }
+  }
+
+  &--blue {
+    background: #2d73b0;
+    color: $white;
+    font-size: 16px;
+    border: 1px solid #2d73b0;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $white;
+      background: #ff7200;
+      border: 1px solid #ff7200;
+      @include box-shadow(none);
+    }
+  }
+
+  &--violet {
+    background: #9322ab;
+    color: $white;
+    font-size: 16px;
+    border: 1px solid #9322ab;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $white;
+      background: #ff7200;
+      border: 1px solid #ff7200;
+      @include box-shadow(none);
+    }
+  }
+  &--lightPink {
+    background: $lvlightpink;
+    color: $white;
+    font-size: 16px;
+    border: 1px solid $lvlightpink;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $white;
+      background: $lvpink;
+      border: 1px solid $lvpink;
+      @include box-shadow(none);
+    }
+  }
+}
